@@ -9,7 +9,7 @@
  do
      n=`basename $i .md`
      echo processing $i
-     pandoc -S -s -c ../pandoc.css  -o $n.html $i
+     pandoc -S -s -c ../pandoc.css  -o ../$n.html $i
  done
 
 
