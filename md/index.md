@@ -1,6 +1,6 @@
 ##The fwdpp home page
 
-This is the homepage for __fwdpp__, which is a C++ template library for implementing forward-time population-gentic simulations.
+This is the homepage for __fwdpp__, which is a C++ template library for implementing forward-time population-genetic simulations.
 
 ###Library documentation
 
