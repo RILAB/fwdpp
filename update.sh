@@ -9,13 +9,17 @@
  do
      n=`basename $i .md`
      echo processing $i
-     pandoc -S -s -c ../pandoc.css  -o ../$n.html $i
+     pandoc -S -s -c pandoc.css  -o ../$n.html $i
  done
-
-
 
 cd ..
 
+cd doc
+
+for i in *.md
+do
+    pandoc -S -s -c ../pandoc.css  -o ../$n.html $i
+done
 
 #cd ../blogs
 
