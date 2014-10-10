@@ -131,7 +131,7 @@ In the following sections, we will discuss policy requirements, how the built-in
 Caveat emptor:
 
 1. This document has been written ad lib, and there may be errors in the implementation of policies below.  (The policies that are directly from the library have been copy/pasted, and so will be ok.)
-2. The code blocks below are really pseudocode.  The include directives are put in there are guides.   Obviously, none of what is below constitutes the complete implementation of a simulation.  For that, see the examples that come with the library.
+2. The code blocks below are really pseudocode.  The include directives are put in there as guides.   Obviously, none of what is below constitutes the complete implementation of a simulation.  For that, see the examples that come with the library.
 
 
 ##Short version for the impatient
@@ -460,7 +460,7 @@ Let us write a recombination map function that models a strong hotspot of crossi
 
 Either of the above code blocks results in a variable called recmap which is a function object representing a function call that takes no additional arguments and returns a double.  The variable recmap can be passed to the algorithm as the recombination (sometimes called genetic in the library documentation) map policy.
 
-Note that the above policies were implemented by _synthesiszing_ a new function object type from a stdd::bind operation via the std::function template class.  You may synthesize all of your policies into variables this way, but it is not required.  However, the next subsection will reveal a case where it is required.
+Note that the above policies were implemented by _synthesiszing_ a new function object type from a __std::bind__ operation via the __std::function__ template class.  You may synthesize all of your policies into variables this way, but it is not required.  However, the next subsection will reveal a case where it is required.
 
 Note that gamete-based simulations only require this policy.
 
