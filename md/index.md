@@ -8,8 +8,7 @@ The library code is [here](https://github.com/molpopgen/fwdpp)
 
 ###Library documentation
 
-* [Tutorial](policies.html) on writing policies
-* [Reference manual](doc/html/index.html) generated from the library source code.
+* [Reference manual](doc/html/index.html) generated from the library source code.  The manual also contains a tutorial on writing policies for simulations.
 
 ###Citation
 
