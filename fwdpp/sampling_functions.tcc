@@ -3,6 +3,7 @@
 #define __FWDPP_SAMPLING_FUNCTIONS_TCC__
 
 #include <fwdpp/fwd_functional.hpp>
+#include <limits>
 
 namespace KTfwd
 {
@@ -148,7 +149,7 @@ ms_sample(gsl_rng * r,
 	      rv.erase(itr);
 	      itr=rv.end();
 	    }
-	  itr--;
+	  --itr;
 	}
     }
   if(!rv.empty())
@@ -233,7 +234,7 @@ ms_sample_separate(gsl_rng * r,
 		  rvneut.erase(itr);
 		  itr=rvneut.end();
 		}
-	      itr--;
+	      --itr;
 	    }
 	}
       if(!rvsel.empty())
@@ -247,7 +248,7 @@ ms_sample_separate(gsl_rng * r,
 		  rvsel.erase(itr);
 		  itr=rvsel.end();
 		}
-	      itr--;
+	      --itr;
 	    }
 	}
 
@@ -286,14 +287,14 @@ ms_sample( gsl_rng * r,
       return std::fabs(site.first-d) <= std::numeric_limits<double>::epsilon();
     };
 
-  const typename vector_type< std::pair<iterator_type,iterator_type>, allocator >::const_iterator dptr = diploids->begin();
+  const auto dptr = diploids->cbegin();
   for( unsigned i = 0 ; i < n/2 ; ++i )
     {
-      size_t ind = size_t(gsl_ran_flat(r,0,diploids->size()));
-      assert( ind < diploids->size() );
-      //for( unsigned mut = 0 ; mut < (dptr+ind)->first->mutations.size() ; ++mut )
-      for(typename iterator_type::value_type::mcont_iterator mptr = (dptr+ind)->first->mutations.begin() ;
-	  mptr != (dptr+ind)->first->mutations.end() ; ++mptr )
+      typename decltype(dptr)::difference_type ind = decltype(ind)(gsl_ran_flat(r,0.,double(diploids->size())));
+      assert(ind >= 0);
+      assert( unsigned(ind) < diploids->size() );
+      for(auto mptr = (dptr+ind)->first->mutations.cbegin() ;
+	  mptr != (dptr+ind)->first->mutations.cend() ; ++mptr )
 	{
 	  double mutpos = (*mptr)->pos;
 	  itr = std::find_if(rv.begin(),rv.end(),
@@ -308,8 +309,8 @@ ms_sample( gsl_rng * r,
 	      itr->second[2*i] = '1';
 	    }
 	}
-      for(typename iterator_type::value_type::mcont_iterator mptr = (dptr+ind)->first->smutations.begin() ;
-	  mptr != (dptr+ind)->first->smutations.end() ; ++mptr )
+      for(auto mptr = (dptr+ind)->first->smutations.cbegin() ;
+	  mptr != (dptr+ind)->first->smutations.cend() ; ++mptr )
 	{
 	  double mutpos = (*mptr)->pos;
 	  itr = std::find_if(rv.begin(),rv.end(),
@@ -370,7 +371,7 @@ ms_sample( gsl_rng * r,
 	      rv.erase(itr);
 	      itr=rv.end();
 	    }
-	  itr--;
+	  --itr;
 	}
     }
   if(!rv.empty())
@@ -402,14 +403,14 @@ ms_sample_separate( gsl_rng * r,
       return std::fabs(site.first-d) <= std::numeric_limits<double>::epsilon();
     };
 
-  const typename vector_type< std::pair<iterator_type,iterator_type>, allocator >::const_iterator dptr = diploids->begin();
+  const auto dptr = diploids->cbegin();
   for( unsigned i = 0 ; i < n/2 ; ++i )
     {
-      size_t ind = size_t(gsl_ran_flat(r,0,diploids->size()));
-      assert( ind < diploids->size() );
-      //for( unsigned mut = 0 ; mut < (dptr+ind)->first->mutations.size() ; ++mut )
-      for(typename iterator_type::value_type::mcont_iterator mptr = (dptr+ind)->first->mutations.begin() ;
-	  mptr != (dptr+ind)->first->mutations.end() ; ++mptr )
+      typename decltype(dptr)::difference_type ind = decltype(ind)(gsl_ran_flat(r,0.,double(diploids->size())));
+      assert(ind>=0);
+      assert( unsigned(ind) < diploids->size() );
+      for(auto mptr = (dptr+ind)->first->mutations.cbegin() ;
+	  mptr != (dptr+ind)->first->mutations.cend() ; ++mptr )
 	{
 	  double mutpos = (*mptr)->pos;
 	  itr = std::find_if(rv.first.begin(),rv.first.end(),
@@ -424,8 +425,8 @@ ms_sample_separate( gsl_rng * r,
 	      itr->second[2*i] = '1';
 	    }
 	}
-      for(typename iterator_type::value_type::mcont_iterator mptr = (dptr+ind)->first->smutations.begin() ;
-	  mptr != (dptr+ind)->first->smutations.end() ; ++mptr )
+      for(auto mptr = (dptr+ind)->first->smutations.cbegin() ;
+	  mptr != (dptr+ind)->first->smutations.cend() ; ++mptr )
 	{
 	  double mutpos = (*mptr)->pos;
 	  itr = std::find_if(rv.second.begin(),rv.second.end(),
@@ -486,7 +487,7 @@ ms_sample_separate( gsl_rng * r,
 	      rv.first.erase(itr);
 	      itr=rv.first.end();
 	    }
-	  itr--;
+	  --itr;
 	}
     }
   if(!rv.first.empty())
@@ -506,7 +507,7 @@ ms_sample_separate( gsl_rng * r,
 	      rv.second.erase(itr);
 	      itr=rv.second.end();
 	    }
-	  itr--;
+	  --itr;
 	}
     }
   if(!rv.second.empty())
@@ -651,7 +652,7 @@ ms_sample( gsl_rng * r,
 		      rv[i].erase(mitr);
 		      mitr = rv[i].end();
 		    }
-		  mitr--;
+		  --mitr;
 		}
 	    }
 	}

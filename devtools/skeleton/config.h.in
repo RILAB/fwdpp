@@ -1,10 +1,25 @@
-/* config-h.in.in.  Generated from configure.ac by autoheader.  */
+/* config.h.in.  Generated from configure.ac by autoheader.  */
 
-/* define if the compiler supports basic C++11 syntax */
-#undef HAVE_CXX11
+/* Define if boost/functional/hash.hpp exists */
+#undef HAVE_BOOST_HASH
+
+/* Define if boost/container/list.hpp exists */
+#undef HAVE_BOOST_LIST
+
+/* Define if boost/pool/pool_alloc.hpp exists */
+#undef HAVE_BOOST_POOL_ALLOC
+
+/* Define if boost/unordered_set.hpp exists */
+#undef HAVE_BOOST_UNORDERED_SET
+
+/* Define if boost/container/vector.hpp exists */
+#undef HAVE_BOOST_VECTOR
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H
+
+/* Define to 1 if you have the `boost_system' library (-lboost_system). */
+#undef HAVE_LIBBOOST_SYSTEM
 
 /* Define to 1 if you have the `gsl' library (-lgsl). */
 #undef HAVE_LIBGSL
@@ -42,9 +57,6 @@
 /* Define to 1 if you have the <unistd.h> header file. */
 #undef HAVE_UNISTD_H
 
-/* Name of package */
-#undef PACKAGE
-
 /* Define to the address where bug reports for this package should be sent. */
 #undef PACKAGE_BUGREPORT
 
@@ -66,8 +78,8 @@
 /* Define to 1 if you have the ANSI C header files. */
 #undef STDC_HEADERS
 
-/* Version number of package */
-#undef VERSION
+/* Prefer containers from namespace std when compiling */
+#undef USE_STANDARD_CONTAINERS
 
 /* Define to empty if `const' does not conform to ANSI C. */
 #undef const

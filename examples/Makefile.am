@@ -1,4 +1,4 @@
-bin_PROGRAMS=diploid \
+check_PROGRAMS=diploid \
 	diploid_ind \
 	diploid_binaryIO \
 	diploid_binaryIO_ind \
@@ -40,16 +40,3 @@ AM_CPPFLAGS+=-DNDEBUG
 endif
 LDADD=
 
-if USE_STANDARD
-AM_CPPFLAGS+=-DUSE_STANDARD_CONTAINERS
-else
-if BVEC_PRESENT
-if BLIST_PRESENT
-#On some systems (or at least recent boost versions, the boost_system is needed to use the boost containers
-LDADD+=-lboost_system
-endif
-endif
-else
-#Boost is missing, so we gotta use the standard headers
-AM_CPPFLAGS+=-DUSE_STANDARD_CONTAINERS
-endif
