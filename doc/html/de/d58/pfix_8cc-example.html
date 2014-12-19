@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -132,26 +132,26 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment">  including s and h as selection coefficient</span></div>
 <div class="line"><span class="comment">  and dominance</span></div>
 <div class="line"><span class="comment">*/</span></div>
-<div class="line"><span class="keyword">typedef</span> <a name="_a0"></a><a class="code" href="../../d1/d7f/structKTfwd_1_1mutation.html">KTfwd::mutation</a> mtype;</div>
+<div class="line"><span class="keyword">typedef</span> <a name="_a0"></a><a class="code" href="../../d1/d7f/structKTfwd_1_1mutation.html">KTfwd::mutation</a> <a name="a1"></a><a class="code" href="../../db/d4f/pfix_8cc.html#a08e697ef28ea008d75cc6de09f177dfa">mtype</a>;</div>
 <div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment">  Store mutations in doubly-linked list</span></div>
 <div class="line"><span class="comment">*/</span></div>
-<div class="line"><span class="keyword">typedef</span> std::list&lt;mtype&gt; mlist;</div>
+<div class="line"><span class="keyword">typedef</span> std::list&lt;mtype&gt; <a name="a2"></a><a class="code" href="../../db/d4f/pfix_8cc.html#a9e521309fd82791f8923f2caa97f264d">mlist</a>;</div>
 <div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment">  Gametes container iterators derived from mlist,</span></div>
 <div class="line"><span class="comment">  so they need to know our mutation type.</span></div>
 <div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keyword">typedef</span> <a name="_a1"></a><a class="code" href="../../d6/d90/structKTfwd_1_1gamete__base.html">KTfwd::gamete_base&lt;mtype,mlist&gt;</a> gtype;</div>
+<div class="line"><span class="keyword">typedef</span> <a name="_a3"></a><a class="code" href="../../d6/d90/structKTfwd_1_1gamete__base.html">KTfwd::gamete_base&lt;mtype,mlist&gt;</a> <a name="a4"></a><a class="code" href="../../db/d4f/pfix_8cc.html#a90644e8cfc025610c073f6057b60646b">gtype</a>;</div>
 <div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment">  glist is our doubly-linked list of gametes</span></div>
 <div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keyword">typedef</span> std::list&lt;gtype&gt; glist;</div>
+<div class="line"><span class="keyword">typedef</span> std::list&lt;gtype&gt; <a name="a5"></a><a class="code" href="../../db/d4f/pfix_8cc.html#add1137fce6a3719d5e34e36bcf708cdd">glist</a>;</div>
 <div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment">  Finally, dipvec is a vector of pairs of iterators</span></div>
 <div class="line"><span class="comment">  derived from our glist</span></div>
 <div class="line"><span class="comment"> */</span></div>
 <div class="line"><span class="keyword">typedef</span> std::vector&lt; std::pair&lt;glist::iterator,</div>
-<div class="line">                               glist::iterator&gt; &gt; dipvec;</div>
+<div class="line">                               glist::iterator&gt; &gt; <a name="a6"></a><a class="code" href="../../db/d4f/pfix_8cc.html#a8f9c6bdc596a8490c24d2859c65ccac2">dipvec</a>;</div>
 <div class="line"></div>
 <div class="line"><span class="comment">//The relevant namespaces</span></div>
 <div class="line"><span class="keyword">using namespace </span>std;</div>
@@ -167,14 +167,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment">  a mutation at position 0, s = 0,</span></div>
 <div class="line"><span class="comment">  count = 1, and dominance = 1.</span></div>
 <div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keyword">struct </span>no_mutation</div>
+<div class="line"><span class="keyword">struct </span><a name="_a7"></a><a class="code" href="../../d8/d3e/structno__mutation.html">no_mutation</a></div>
 <div class="line">{</div>
-<div class="line">  <span class="keyword">typedef</span> mtype result_type;</div>
+<div class="line">  <span class="keyword">typedef</span> <a class="code" href="../../d1/d7f/structKTfwd_1_1mutation.html">mtype</a> result_type;</div>
 <div class="line">  <span class="comment">//A pointer to a list of mutations MUST be passed to the mutation model</span></div>
-<div class="line">  <span class="keyword">inline</span> mtype operator()(mlist * mutations)<span class="keyword">const </span></div>
+<div class="line">  <span class="keyword">inline</span> <a class="code" href="../../d1/d7f/structKTfwd_1_1mutation.html">mtype</a> operator()(<a class="code" href="../../d8/d48/bneck__selection__dist_8cc.html#aeb0d6c95466be026b693c2c09289d58e">mlist</a> * mutations)<span class="keyword">const </span></div>
 <div class="line"><span class="keyword">  </span>{</div>
 <div class="line">    abort();<span class="comment">//must never be called!</span></div>
-<div class="line">    <span class="keywordflow">return</span> mtype(0,0,1,1);</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code" href="../../db/d4f/pfix_8cc.html#a08e697ef28ea008d75cc6de09f177dfa">mtype</a>(0,0,1,1);</div>
 <div class="line">  }</div>
 <div class="line">};</div>
 <div class="line"></div>
@@ -187,7 +187,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><span class="comment"></span></div>
 <div class="line"><span class="comment">  This is that policy for this sim.</span></div>
 <div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keyword">struct </span>no_recombination</div>
+<div class="line"><span class="keyword">struct </span><a name="_a8"></a><a class="code" href="../../d5/d6a/structno__recombination.html">no_recombination</a></div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">inline</span> <span class="keywordtype">double</span> operator()(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">  </span>{</div>
@@ -196,7 +196,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">  }</div>
 <div class="line">};</div>
 <div class="line"></div>
-<div class="line"><span class="keywordtype">int</span> main( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> ** argv )</div>
+<div class="line"><span class="keywordtype">int</span> <a name="a9"></a><a class="code" href="../../db/d4f/pfix_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> ** argv )</div>
 <div class="line">{</div>
 <div class="line">  <span class="keywordflow">if</span> ( argc != 5)</div>
 <div class="line">    {</div>
@@ -229,12 +229,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">  <span class="keywordflow">while</span>( rep++ &lt; nreps )</div>
 <div class="line">    {</div>
 <div class="line">      <span class="comment">//Create an empty mutation list</span></div>
-<div class="line">      mlist mutations;</div>
+<div class="line">      <a class="code" href="../../d8/d48/bneck__selection__dist_8cc.html#aeb0d6c95466be026b693c2c09289d58e">mlist</a> mutations;</div>
 <div class="line">      <span class="comment">//The population begins with 1 gamete and 2N copies of that gamete</span></div>
-<div class="line">      glist gametes(1,gtype(2*N));</div>
+<div class="line">      <a class="code" href="../../d8/d48/bneck__selection__dist_8cc.html#a4cacd5f42d23c852c8b8a072f49b83bd">glist</a> gametes(1,<a class="code" href="../../db/d4f/pfix_8cc.html#a90644e8cfc025610c073f6057b60646b">gtype</a>(2*N));</div>
 <div class="line"></div>
 <div class="line">      <span class="comment">//The population begins with N diploids.  Each diploid contains two copies of the initial gamete</span></div>
-<div class="line">      dipvec diploids(N,make_pair(gametes.begin(),gametes.begin()));</div>
+<div class="line">      <a class="code" href="../../db/d4f/pfix_8cc.html#a8f9c6bdc596a8490c24d2859c65ccac2">dipvec</a> diploids(N,make_pair(gametes.begin(),gametes.begin()));</div>
 <div class="line"></div>
 <div class="line">      <span class="comment">/*</span></div>
 <div class="line"><span class="comment">        The next several operations give some insight into what the internals of the library are doing.</span></div>
@@ -251,7 +251,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">      mlist::iterator mitr = mutations.insert(mutations.end(),</div>
 <div class="line">                                              <a class="code" href="../../d1/d7f/structKTfwd_1_1mutation.html">mutation</a>(0.5,s,1,1.));</div>
 <div class="line">      <span class="comment">//make a new gamete containing this new mutation</span></div>
-<div class="line">      gtype mutant(1);</div>
+<div class="line">      <a class="code" href="../../d6/d90/structKTfwd_1_1gamete__base.html">gtype</a> mutant(1);</div>
 <div class="line"></div>
 <div class="line">      <span class="comment">//The mutation is selected, so we add it to the selected mutations container of our new gamete</span></div>
 <div class="line">      mutant.smutations.push_back(mitr);</div>
@@ -278,22 +278,22 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line">          <span class="comment">/*</span></div>
 <div class="line"><span class="comment">            sample_diploid is the main function for individual-based simulations.</span></div>
 <div class="line"><span class="comment">          */</span></div>
-<div class="line">          <a name="a2"></a><a class="code" href="../../da/d8b/namespaceKTfwd.html#a946efaa4a6095f4f2aadda44a809a477">sample_diploid</a>(r,</div>
+<div class="line">          <a name="a10"></a><a class="code" href="../../da/d8b/namespaceKTfwd.html#a946efaa4a6095f4f2aadda44a809a477">sample_diploid</a>(r,</div>
 <div class="line">                         &amp;gametes,</div>
 <div class="line">                         &amp;diploids,</div>
 <div class="line">                         &amp;mutations,</div>
 <div class="line">                         N,                                                         <span class="comment">//If we wished pop. size to change, we&#39;d pass N,N2 here.  For models where N in next generation changes over time, N2 would be updated accordingly each generation at the end of this block.</span></div>
 <div class="line">                         0.,                                                        <span class="comment">//mutation rate = 0.</span></div>
-<div class="line">                         std::bind( no_mutation(),std::placeholders::_1 ),                           <span class="comment">//Our mutation model.  The _1 is a placeholder for a pointer to the list of mutations.</span></div>
-<div class="line">                         std::bind(<a name="_a3"></a><a class="code" href="../../d1/d5b/structKTfwd_1_1genetics101.html">KTfwd::genetics101</a>(),std::placeholders::_1,std::placeholders::_2,                    <span class="comment">//genetics101 is the basic model of crossing over in fwdpp.  If you want different models, write a replacement policy.  _1 and _2 are place holders for the two gametes that will recombine.</span></div>
+<div class="line">                         std::bind( <a class="code" href="../../d8/d3e/structno__mutation.html">no_mutation</a>(),std::placeholders::_1 ),                           <span class="comment">//Our mutation model.  The _1 is a placeholder for a pointer to the list of mutations.</span></div>
+<div class="line">                         std::bind(<a name="_a11"></a><a class="code" href="../../d1/d5b/structKTfwd_1_1genetics101.html">KTfwd::genetics101</a>(),std::placeholders::_1,std::placeholders::_2,                    <span class="comment">//genetics101 is the basic model of crossing over in fwdpp.  If you want different models, write a replacement policy.  _1 and _2 are place holders for the two gametes that will recombine.</span></div>
 <div class="line">                                     &amp;gametes,</div>
 <div class="line">                                     0.,                                            <span class="comment">//The rec. rate is 0</span></div>
 <div class="line">                                     r,</div>
-<div class="line">                                     no_recombination()),                           <span class="comment">//This is our genetic map</span></div>
+<div class="line">                                     <a class="code" href="../../d5/d6a/structno__recombination.html">no_recombination</a>()),                           <span class="comment">//This is our genetic map</span></div>
 <div class="line">                         std::bind(KTfwd::insert_at_end&lt;mtype,mlist&gt;,std::placeholders::_1,std::placeholders::_2),      <span class="comment">//This policy defines how new mutations are added to the mlist.  They are inserted at the end.  This will never be called (as mut. rate = 0), but it is required.</span></div>
 <div class="line">                         std::bind(KTfwd::insert_at_end&lt;gtype,glist&gt;,std::placeholders::_1,std::placeholders::_2),      <span class="comment">//This policy defines how new gametes are added to the glist.  They are inserted at the end.  This will never be called (no mutation nor recombination), but it is required.</span></div>
-<div class="line">                         std::bind(<a name="_a4"></a><a class="code" href="../../dd/de5/structKTfwd_1_1multiplicative__diploid.html">KTfwd::multiplicative_diploid</a>(),std::placeholders::_1,std::placeholders::_2,2.),     <span class="comment">//The fitness model.  Fitnesses are 1, 1+hs, 1+scaling*s per site, and multiplicative over sites.  Scaling = 2 and h = 1 (as used here) gives 1, 1+s, 1+2s, which is genic selection.</span></div>
-<div class="line">                         std::bind(<a name="_a5"></a><a class="code" href="../../d4/de8/structKTfwd_1_1mutation__remover.html">KTfwd::mutation_remover</a>(),std::placeholders::_1,0,2*N));          <span class="comment">//A mutation that hits a count of either 0 or 2N is removed from a gamete.</span></div>
+<div class="line">                         std::bind(<a name="_a12"></a><a class="code" href="../../dd/de5/structKTfwd_1_1multiplicative__diploid.html">KTfwd::multiplicative_diploid</a>(),std::placeholders::_1,std::placeholders::_2,2.),     <span class="comment">//The fitness model.  Fitnesses are 1, 1+hs, 1+scaling*s per site, and multiplicative over sites.  Scaling = 2 and h = 1 (as used here) gives 1, 1+s, 1+2s, which is genic selection.</span></div>
+<div class="line">                         std::bind(<a name="_a13"></a><a class="code" href="../../d4/de8/structKTfwd_1_1mutation__remover.html">KTfwd::mutation_remover</a>(),std::placeholders::_1,0,2*N));          <span class="comment">//A mutation that hits a count of either 0 or 2N is removed from a gamete.</span></div>
 <div class="line"></div>
 <div class="line">          <span class="comment">/*</span></div>
 <div class="line"><span class="comment">            Typically, for a &quot;pop-gen&quot; simulation where relative fitness is all that matters,</span></div>

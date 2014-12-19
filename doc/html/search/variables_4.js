@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pos',['pos',['../d1/da4/structKTfwd_1_1mutation__base.html#aed95181f38c8e17b19a7a9da4b373b03',1,'KTfwd::mutation_base']]]
+  ['mutations',['mutations',['../d6/d90/structKTfwd_1_1gamete__base.html#a552299235487586b084e84f4a8a9a05a',1,'KTfwd::gamete_base']]]
 ];

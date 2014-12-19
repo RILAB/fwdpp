@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -93,12 +93,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>The main (only) namespace defined by this library.  
+<p>The primary namespace defined by this library.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:de/dbd/namespaceKTfwd_1_1fwdpp__internal"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbd/namespaceKTfwd_1_1fwdpp__internal.html">fwdpp_internal</a></td></tr>
+<tr class="memdesc:de/dbd/namespaceKTfwd_1_1fwdpp__internal"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nested namespace for nuts and bolts of certain library functions. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -196,16 +197,16 @@ Functions</h2></td></tr>
 <tr class="memitem:a41bccb4fd1108616d626e371c3cf83c4"><td class="memTemplItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d8b/namespaceKTfwd.html#a41bccb4fd1108616d626e371c3cf83c4">recombine</a> (gsl_rng *r, vector_type&lt; gamete_type, vector_type_allocator &gt; *gametes, const unsigned &amp;twoN, const double &amp;littler, const map_function &amp;mf, const double &amp;f=0)</td></tr>
 <tr class="separator:a41bccb4fd1108616d626e371c3cf83c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a761a0438d183384e5e8b49e89121d21e"><td class="memTemplParams" colspan="2">template&lt;typename gamete_type , typename gamete_list_type_allocator , typename mutation_list_type_allocator , typename diploid_vector_type_allocator , typename diploid_fitness_function , typename mutation_removal_policy , typename mutation_model , typename recombination_policy , typename mutation_insertion_policy , typename gamete_insertion_policy , template&lt; typename, typename &gt; class gamete_list_type, template&lt; typename, typename &gt; class mutation_list_type, template&lt; typename, typename &gt; class diploid_vector_type&gt; </td></tr>
-<tr class="memitem:a761a0438d183384e5e8b49e89121d21e"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d8b/namespaceKTfwd.html#a761a0438d183384e5e8b49e89121d21e">sample_diploid</a> (gsl_rng *r, gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt; *gametes, diploid_vector_type&lt; std::pair&lt; typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator, typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator &gt;, diploid_vector_type_allocator &gt; *diploids, mutation_list_type&lt; typename gamete_type::mutation_type, mutation_list_type_allocator &gt; *mutations, const unsigned &amp;N_curr, const double &amp;mu, const mutation_model &amp;mmodel, const recombination_policy &amp;rec_pol, const mutation_insertion_policy &amp;mpolicy, const gamete_insertion_policy &amp;gpolicy_mut, const diploid_fitness_function &amp;ff, const mutation_removal_policy &amp;mp, const double &amp;f=0)</td></tr>
+<tr class="memitem:a761a0438d183384e5e8b49e89121d21e"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d8b/namespaceKTfwd.html#a761a0438d183384e5e8b49e89121d21e">sample_diploid</a> (gsl_rng *r, gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt; *gametes, diploid_vector_type&lt; std::pair&lt; typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator, typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator &gt;, diploid_vector_type_allocator &gt; *diploids, mutation_list_type&lt; typename gamete_type::mutation_type, mutation_list_type_allocator &gt; *mutations, const unsigned &amp;N_curr, const double &amp;mu, const <a class="el" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp;mmodel, const recombination_policy &amp;rec_pol, const mutation_insertion_policy &amp;mpolicy, const gamete_insertion_policy &amp;gpolicy_mut, const diploid_fitness_function &amp;ff, const mutation_removal_policy &amp;mp, const double &amp;f=0)</td></tr>
 <tr class="separator:a761a0438d183384e5e8b49e89121d21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a225d8aeed18091cd7ced5890f56afe52"><td class="memTemplParams" colspan="2">template&lt;typename gamete_type , typename gamete_list_type_allocator , typename mutation_list_type_allocator , typename diploid_vector_type_allocator , typename diploid_fitness_function , typename mutation_removal_policy , typename mutation_model , typename recombination_policy , typename mutation_insertion_policy , typename gamete_insertion_policy , template&lt; typename, typename &gt; class gamete_list_type, template&lt; typename, typename &gt; class mutation_list_type, template&lt; typename, typename &gt; class diploid_vector_type&gt; </td></tr>
-<tr class="memitem:a225d8aeed18091cd7ced5890f56afe52"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d8b/namespaceKTfwd.html#a225d8aeed18091cd7ced5890f56afe52">sample_diploid</a> (gsl_rng *r, gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt; *gametes, diploid_vector_type&lt; std::pair&lt; typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator, typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator &gt;, diploid_vector_type_allocator &gt; *diploids, mutation_list_type&lt; typename gamete_type::mutation_type, mutation_list_type_allocator &gt; *mutations, const unsigned &amp;N_curr, const unsigned &amp;N_next, const double &amp;mu, const mutation_model &amp;mmodel, const recombination_policy &amp;rec_pol, const mutation_insertion_policy &amp;mpolicy, const gamete_insertion_policy &amp;gpolicy_mut, const diploid_fitness_function &amp;ff, const mutation_removal_policy &amp;mp, const double &amp;f=0)</td></tr>
+<tr class="memitem:a225d8aeed18091cd7ced5890f56afe52"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d8b/namespaceKTfwd.html#a225d8aeed18091cd7ced5890f56afe52">sample_diploid</a> (gsl_rng *r, gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt; *gametes, diploid_vector_type&lt; std::pair&lt; typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator, typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator &gt;, diploid_vector_type_allocator &gt; *diploids, mutation_list_type&lt; typename gamete_type::mutation_type, mutation_list_type_allocator &gt; *mutations, const unsigned &amp;N_curr, const unsigned &amp;N_next, const double &amp;mu, const <a class="el" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp;mmodel, const recombination_policy &amp;rec_pol, const mutation_insertion_policy &amp;mpolicy, const gamete_insertion_policy &amp;gpolicy_mut, const diploid_fitness_function &amp;ff, const mutation_removal_policy &amp;mp, const double &amp;f=0)</td></tr>
 <tr class="separator:a225d8aeed18091cd7ced5890f56afe52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf1d8fa7c50cd8dadcceef879b13a2c5"><td class="memTemplParams" colspan="2">template&lt;typename gamete_type , typename metapop_gamete_vector_type_allocator , typename metapop_diploid_vector_type_allocator , typename gamete_list_type_allocator , typename mutation_list_type_allocator , typename diploid_vector_type_allocator , typename diploid_fitness_function_container , typename mutation_removal_policy , typename mutation_model , typename recombination_policy , typename migration_policy , typename mutation_insertion_policy , typename gamete_insertion_policy , template&lt; typename, typename &gt; class gamete_list_type, template&lt; typename, typename &gt; class mutation_list_type, template&lt; typename, typename &gt; class diploid_vector_type, template&lt; typename, typename &gt; class metapop_gamete_vector_type, template&lt; typename, typename &gt; class metapop_diploid_vector_type&gt; </td></tr>
-<tr class="memitem:aaf1d8fa7c50cd8dadcceef879b13a2c5"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d8b/namespaceKTfwd.html#aaf1d8fa7c50cd8dadcceef879b13a2c5">sample_diploid</a> (gsl_rng *r, metapop_gamete_vector_type&lt; gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;, metapop_gamete_vector_type_allocator &gt; *metapop, metapop_diploid_vector_type&lt; diploid_vector_type&lt; std::pair&lt; typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator, typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator &gt;, diploid_vector_type_allocator &gt;, metapop_diploid_vector_type_allocator &gt; *diploids, mutation_list_type&lt; typename gamete_type::mutation_type, mutation_list_type_allocator &gt; *mutations, const unsigned *N_curr, const double &amp;mu, const mutation_model &amp;mmodel, const recombination_policy &amp;rec_pol, const mutation_insertion_policy &amp;mpolicy, const gamete_insertion_policy &amp;gpolicy_mut, const diploid_fitness_function_container &amp;ffs, const mutation_removal_policy &amp;mp, const migration_policy &amp;mig, const double *f=NULL)</td></tr>
+<tr class="memitem:aaf1d8fa7c50cd8dadcceef879b13a2c5"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d8b/namespaceKTfwd.html#aaf1d8fa7c50cd8dadcceef879b13a2c5">sample_diploid</a> (gsl_rng *r, metapop_gamete_vector_type&lt; gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;, metapop_gamete_vector_type_allocator &gt; *metapop, metapop_diploid_vector_type&lt; diploid_vector_type&lt; std::pair&lt; typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator, typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator &gt;, diploid_vector_type_allocator &gt;, metapop_diploid_vector_type_allocator &gt; *diploids, mutation_list_type&lt; typename gamete_type::mutation_type, mutation_list_type_allocator &gt; *mutations, const unsigned *N_curr, const double &amp;mu, const <a class="el" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp;mmodel, const recombination_policy &amp;rec_pol, const mutation_insertion_policy &amp;mpolicy, const gamete_insertion_policy &amp;gpolicy_mut, const diploid_fitness_function_container &amp;ffs, const mutation_removal_policy &amp;mp, const migration_policy &amp;mig, const double *f=NULL)</td></tr>
 <tr class="separator:aaf1d8fa7c50cd8dadcceef879b13a2c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d97cd41a47a5e01dd034b94e16f49f2"><td class="memTemplParams" colspan="2">template&lt;typename gamete_type , typename metapop_gamete_vector_type_allocator , typename metapop_diploid_vector_type_allocator , typename gamete_list_type_allocator , typename mutation_list_type_allocator , typename diploid_vector_type_allocator , typename diploid_fitness_function_container , typename mutation_removal_policy , typename mutation_model , typename recombination_policy , typename migration_policy , typename mutation_insertion_policy , typename gamete_insertion_policy , template&lt; typename, typename &gt; class gamete_list_type, template&lt; typename, typename &gt; class mutation_list_type, template&lt; typename, typename &gt; class diploid_vector_type, template&lt; typename, typename &gt; class metapop_gamete_vector_type, template&lt; typename, typename &gt; class metapop_diploid_vector_type&gt; </td></tr>
-<tr class="memitem:a9d97cd41a47a5e01dd034b94e16f49f2"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d8b/namespaceKTfwd.html#a9d97cd41a47a5e01dd034b94e16f49f2">sample_diploid</a> (gsl_rng *r, metapop_gamete_vector_type&lt; gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;, metapop_gamete_vector_type_allocator &gt; *metapop, metapop_diploid_vector_type&lt; diploid_vector_type&lt; std::pair&lt; typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator, typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator &gt;, diploid_vector_type_allocator &gt;, metapop_diploid_vector_type_allocator &gt; *diploids, mutation_list_type&lt; typename gamete_type::mutation_type, mutation_list_type_allocator &gt; *mutations, const unsigned *N_curr, const unsigned *N_next, const double &amp;mu, const mutation_model &amp;mmodel, const recombination_policy &amp;rec_pol, const mutation_insertion_policy &amp;mpolicy, const gamete_insertion_policy &amp;gpolicy_mut, const diploid_fitness_function_container &amp;ffs, const mutation_removal_policy &amp;mp, const migration_policy &amp;mig, const double *f=NULL)</td></tr>
+<tr class="memitem:a9d97cd41a47a5e01dd034b94e16f49f2"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d8b/namespaceKTfwd.html#a9d97cd41a47a5e01dd034b94e16f49f2">sample_diploid</a> (gsl_rng *r, metapop_gamete_vector_type&lt; gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;, metapop_gamete_vector_type_allocator &gt; *metapop, metapop_diploid_vector_type&lt; diploid_vector_type&lt; std::pair&lt; typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator, typename gamete_list_type&lt; gamete_type, gamete_list_type_allocator &gt;::iterator &gt;, diploid_vector_type_allocator &gt;, metapop_diploid_vector_type_allocator &gt; *diploids, mutation_list_type&lt; typename gamete_type::mutation_type, mutation_list_type_allocator &gt; *mutations, const unsigned *N_curr, const unsigned *N_next, const double &amp;mu, const <a class="el" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp;mmodel, const recombination_policy &amp;rec_pol, const mutation_insertion_policy &amp;mpolicy, const gamete_insertion_policy &amp;gpolicy_mut, const diploid_fitness_function_container &amp;ffs, const mutation_removal_policy &amp;mp, const migration_policy &amp;mig, const double *f=NULL)</td></tr>
 <tr class="memdesc:a9d97cd41a47a5e01dd034b94e16f49f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evolve a metapopulation where demes may be changing size. For individual-based sims. Evolve a metapopulation where demes may be changing size. For individual-based sims.  <a href="#a9d97cd41a47a5e01dd034b94e16f49f2">More...</a><br/></td></tr>
 <tr class="separator:a9d97cd41a47a5e01dd034b94e16f49f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade94ef65f07d1e664a19f20d2582728d"><td class="memTemplParams" colspan="2">template&lt;typename gamete_type , typename glist_vector_type_allocator , typename gamete_list_type_allocator , typename mutation_list_type_allocator , typename diploid_vector_type_allocator , typename locus_vector_type_allocator , typename diploid_fitness_function , typename mutation_removal_policy , typename mutation_model_container , typename recombination_policy_container , typename mutation_insertion_policy , typename gamete_insertion_policy , template&lt; typename, typename &gt; class gamete_list_type, template&lt; typename, typename &gt; class glist_vector_type, template&lt; typename, typename &gt; class mutation_list_type, template&lt; typename, typename &gt; class diploid_vector_type, template&lt; typename, typename &gt; class locus_vector_type&gt; </td></tr>
@@ -297,10 +298,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ad1d1af58a12e56b980a03b2056770370"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d8b/namespaceKTfwd.html#ad1d1af58a12e56b980a03b2056770370">migrate</a> (gsl_rng *r, vector_type&lt; gamete_type, vector_type_allocator &gt; *gametes1, vector_type&lt; gamete_type, vector_type_allocator &gt; *gametes2, const unsigned &amp;twoN_1, const unsigned &amp;twoN_2, const double &amp;m)</td></tr>
 <tr class="separator:ad1d1af58a12e56b980a03b2056770370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9566be0bd568e2e75b02b1f46457c25c"><td class="memTemplParams" colspan="2">template&lt;typename gamete_type , typename mutation_model , typename gamete_insertion_policy , typename mutation_insertion_policy , typename vector_type_allocator , typename list_type_allocator , template&lt; typename, typename &gt; class vector_type, template&lt; typename, typename &gt; class list_type&gt; </td></tr>
-<tr class="memitem:a9566be0bd568e2e75b02b1f46457c25c"><td class="memTemplItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d8b/namespaceKTfwd.html#a9566be0bd568e2e75b02b1f46457c25c">mutate</a> (gsl_rng *r, vector_type&lt; gamete_type, vector_type_allocator &gt; *gametes, list_type&lt; typename gamete_type::mutation_type, list_type_allocator &gt; *mutations, const double &amp;mu, const mutation_model &amp;mmodel, const gamete_insertion_policy &amp;gpolicy, const mutation_insertion_policy &amp;mpolicy)</td></tr>
+<tr class="memitem:a9566be0bd568e2e75b02b1f46457c25c"><td class="memTemplItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d8b/namespaceKTfwd.html#a9566be0bd568e2e75b02b1f46457c25c">mutate</a> (gsl_rng *r, vector_type&lt; gamete_type, vector_type_allocator &gt; *gametes, list_type&lt; typename gamete_type::mutation_type, list_type_allocator &gt; *mutations, const double &amp;mu, const <a class="el" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp;mmodel, const gamete_insertion_policy &amp;gpolicy, const mutation_insertion_policy &amp;mpolicy)</td></tr>
 <tr class="separator:a9566be0bd568e2e75b02b1f46457c25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a949b79d4df5bc10c6c1b31d311e4a392"><td class="memTemplParams" colspan="2">template&lt;typename iterator_type , typename mutation_model , typename mutation_insertion_policy , typename gamete_insertion_policy , typename list_type_allocator , typename list_type_allocator2 , template&lt; typename, typename &gt; class list_type, template&lt; typename, typename &gt; class list_type2&gt; </td></tr>
-<tr class="memitem:a949b79d4df5bc10c6c1b31d311e4a392"><td class="memTemplItemLeft" align="right" valign="top">iterator_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d8b/namespaceKTfwd.html#a949b79d4df5bc10c6c1b31d311e4a392">mutate_gamete</a> (gsl_rng *r, const double &amp;mu, list_type&lt; typename iterator_type::value_type, list_type_allocator &gt; *gametes, list_type2&lt; typename iterator_type::value_type::mutation_type, list_type_allocator2 &gt; *mutations, iterator_type &amp;g, const mutation_model &amp;mmodel, const mutation_insertion_policy &amp;mpolicy, const gamete_insertion_policy &amp;gpolicy)</td></tr>
+<tr class="memitem:a949b79d4df5bc10c6c1b31d311e4a392"><td class="memTemplItemLeft" align="right" valign="top">iterator_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d8b/namespaceKTfwd.html#a949b79d4df5bc10c6c1b31d311e4a392">mutate_gamete</a> (gsl_rng *r, const double &amp;mu, list_type&lt; typename iterator_type::value_type, list_type_allocator &gt; *gametes, list_type2&lt; typename iterator_type::value_type::mutation_type, list_type_allocator2 &gt; *mutations, iterator_type &amp;g, const <a class="el" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp;mmodel, const mutation_insertion_policy &amp;mpolicy, const gamete_insertion_policy &amp;gpolicy)</td></tr>
 <tr class="memdesc:a949b79d4df5bc10c6c1b31d311e4a392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply mutation model to an individual gamete. Used for individual-based forward simulations.  <a href="#a949b79d4df5bc10c6c1b31d311e4a392">More...</a><br/></td></tr>
 <tr class="separator:a949b79d4df5bc10c6c1b31d311e4a392"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b4ac5932b4c1d311486946b2b6f612c"><td class="memTemplParams" colspan="2">template&lt;typename iterator_type &gt; </td></tr>
@@ -370,7 +371,7 @@ vector_type_allocator &gt;<br class="typebreak"/>
 <tr class="separator:a6a2696271f4be7ee04aa58c9253e18a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The main (only) namespace defined by this library. </p>
+<div class="textblock"><p>The primary namespace defined by this library. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="ada593997c1d5b9a0ca50c09dcfc2f358"></a>
 <div class="memitem">
@@ -445,7 +446,7 @@ template&lt;typename vector_type_allocator , typename gamete_type , template&lt;
 </div><div class="memdoc">
 
 <p>Returns true if the sum of counts in gametes equals twoN, false otherwise Returns true if the sum of counts in gametes equals twoN, false otherwise. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d81/diploid_8cc-example.html#a6">diploid.cc</a>, <a class="el" href="../../d7/dd8/diploid_binaryIO_8cc-example.html#a6">diploid_binaryIO.cc</a>, <a class="el" href="../../d7/d24/diploid_fixed_sh_8cc-example.html#a6">diploid_fixed_sh.cc</a>, <a class="el" href="../../df/df6/diploid_fixed_sh_ind_8cc-example.html#a2">diploid_fixed_sh_ind.cc</a>, <a class="el" href="../../d3/da0/diploid_gzbinaryIO_8cc-example.html#a6">diploid_gzbinaryIO.cc</a>, <a class="el" href="../../db/de9/diploid_ind_8cc-example.html#a7">diploid_ind.cc</a>, <a class="el" href="../../dd/da1/diploid_twopop_mig_8cc-example.html#a6">diploid_twopop_mig.cc</a>, <a class="el" href="../../d3/d0a/RHH_8cc-example.html#a5">RHH.cc</a>, and <a class="el" href="../../dc/d1a/TFL2013_8cc-example.html#a4">TFL2013.cc</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d81/diploid_8cc-example.html#a15">diploid.cc</a>, <a class="el" href="../../d7/dd8/diploid_binaryIO_8cc-example.html#a24">diploid_binaryIO.cc</a>, <a class="el" href="../../d7/d24/diploid_fixed_sh_8cc-example.html#a10">diploid_fixed_sh.cc</a>, <a class="el" href="../../df/df6/diploid_fixed_sh_ind_8cc-example.html#a6">diploid_fixed_sh_ind.cc</a>, <a class="el" href="../../d3/da0/diploid_gzbinaryIO_8cc-example.html#a24">diploid_gzbinaryIO.cc</a>, <a class="el" href="../../db/de9/diploid_ind_8cc-example.html#a16">diploid_ind.cc</a>, <a class="el" href="../../dd/da1/diploid_twopop_mig_8cc-example.html#a18">diploid_twopop_mig.cc</a>, <a class="el" href="../../d3/d0a/RHH_8cc-example.html#a13">RHH.cc</a>, and <a class="el" href="../../dc/d1a/TFL2013_8cc-example.html#a16">TFL2013.cc</a>.</dd>
 </dl>
 </div>
 </div>
@@ -787,7 +788,7 @@ template&lt;typename gamete_type , typename vector_type_allocator , template&lt;
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/da1/diploid_twopop_mig_8cc-example.html#a9">diploid_twopop_mig.cc</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/da1/diploid_twopop_mig_8cc-example.html#a21">diploid_twopop_mig.cc</a>.</dd>
 </dl>
 </div>
 </div>
@@ -874,7 +875,7 @@ template&lt;typename gamete_type , typename vector_type_allocator , template&lt;
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d81/diploid_8cc-example.html#a9">diploid.cc</a>, <a class="el" href="../../db/de9/diploid_ind_8cc-example.html#a8">diploid_ind.cc</a>, and <a class="el" href="../../dd/da1/diploid_twopop_mig_8cc-example.html#a10">diploid_twopop_mig.cc</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d81/diploid_8cc-example.html#a18">diploid.cc</a>, <a class="el" href="../../db/de9/diploid_ind_8cc-example.html#a17">diploid_ind.cc</a>, and <a class="el" href="../../dd/da1/diploid_twopop_mig_8cc-example.html#a22">diploid_twopop_mig.cc</a>.</dd>
 </dl>
 </div>
 </div>
@@ -963,7 +964,7 @@ template&lt;typename gamete_type , typename vector_type_allocator , template&lt;
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/d24/diploid_fixed_sh_8cc-example.html#a9">diploid_fixed_sh.cc</a>, <a class="el" href="../../df/df6/diploid_fixed_sh_ind_8cc-example.html#a8">diploid_fixed_sh_ind.cc</a>, <a class="el" href="../../db/d2e/migsel_ind_8cc-example.html#a9">migsel_ind.cc</a>, and <a class="el" href="../../d3/d0a/RHH_8cc-example.html#a8">RHH.cc</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/d24/diploid_fixed_sh_8cc-example.html#a13">diploid_fixed_sh.cc</a>, <a class="el" href="../../df/df6/diploid_fixed_sh_ind_8cc-example.html#a12">diploid_fixed_sh_ind.cc</a>, <a class="el" href="../../db/d2e/migsel_ind_8cc-example.html#a25">migsel_ind.cc</a>, and <a class="el" href="../../d3/d0a/RHH_8cc-example.html#a16">RHH.cc</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1100,7 +1101,7 @@ template&lt;typename gamete_type , typename mutation_model , typename gamete_ins
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const mutation_model &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp;&#160;</td>
           <td class="paramname"><em>mmodel</em>, </td>
         </tr>
         <tr>
@@ -1122,7 +1123,7 @@ template&lt;typename gamete_type , typename mutation_model , typename gamete_ins
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d81/diploid_8cc-example.html#a7">diploid.cc</a>, <a class="el" href="../../d7/dd8/diploid_binaryIO_8cc-example.html#a7">diploid_binaryIO.cc</a>, <a class="el" href="../../d7/d24/diploid_fixed_sh_8cc-example.html#a7">diploid_fixed_sh.cc</a>, <a class="el" href="../../d3/da0/diploid_gzbinaryIO_8cc-example.html#a7">diploid_gzbinaryIO.cc</a>, <a class="el" href="../../dd/da1/diploid_twopop_mig_8cc-example.html#a7">diploid_twopop_mig.cc</a>, <a class="el" href="../../d3/d0a/RHH_8cc-example.html#a6">RHH.cc</a>, and <a class="el" href="../../dc/d1a/TFL2013_8cc-example.html#a5">TFL2013.cc</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d81/diploid_8cc-example.html#a16">diploid.cc</a>, <a class="el" href="../../d7/dd8/diploid_binaryIO_8cc-example.html#a25">diploid_binaryIO.cc</a>, <a class="el" href="../../d7/d24/diploid_fixed_sh_8cc-example.html#a11">diploid_fixed_sh.cc</a>, <a class="el" href="../../d3/da0/diploid_gzbinaryIO_8cc-example.html#a25">diploid_gzbinaryIO.cc</a>, <a class="el" href="../../dd/da1/diploid_twopop_mig_8cc-example.html#a19">diploid_twopop_mig.cc</a>, <a class="el" href="../../d3/d0a/RHH_8cc-example.html#a14">RHH.cc</a>, and <a class="el" href="../../dc/d1a/TFL2013_8cc-example.html#a17">TFL2013.cc</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1165,7 +1166,7 @@ template&lt;typename iterator_type , typename mutation_model , typename mutation
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const mutation_model &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp;&#160;</td>
           <td class="paramname"><em>mmodel</em>, </td>
         </tr>
         <tr>
@@ -1364,7 +1365,7 @@ template&lt;typename gamete_type , typename vector_type_allocator , template&lt;
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d2e/migsel_ind_8cc-example.html#a11">migsel_ind.cc</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d2e/migsel_ind_8cc-example.html#a27">migsel_ind.cc</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1572,7 +1573,7 @@ template&lt;typename gamete_type , typename vector_type_allocator , template&lt;
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/dd8/diploid_binaryIO_8cc-example.html#a10">diploid_binaryIO.cc</a>, <a class="el" href="../../d6/d0a/diploid_binaryIO_ind_8cc-example.html#a8">diploid_binaryIO_ind.cc</a>, <a class="el" href="../../d3/da0/diploid_gzbinaryIO_8cc-example.html#a10">diploid_gzbinaryIO.cc</a>, and <a class="el" href="../../d6/d1e/diploid_gzbinaryIO_ind_8cc-example.html#a8">diploid_gzbinaryIO_ind.cc</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/dd8/diploid_binaryIO_8cc-example.html#a28">diploid_binaryIO.cc</a>, <a class="el" href="../../d6/d0a/diploid_binaryIO_ind_8cc-example.html#a26">diploid_binaryIO_ind.cc</a>, <a class="el" href="../../d3/da0/diploid_gzbinaryIO_8cc-example.html#a28">diploid_gzbinaryIO.cc</a>, and <a class="el" href="../../d6/d1e/diploid_gzbinaryIO_ind_8cc-example.html#a26">diploid_gzbinaryIO_ind.cc</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1729,7 +1730,7 @@ template&lt;typename gamete_type , typename vector_type_allocator , template&lt;
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d81/diploid_8cc-example.html#a8">diploid.cc</a>, <a class="el" href="../../d7/dd8/diploid_binaryIO_8cc-example.html#a8">diploid_binaryIO.cc</a>, <a class="el" href="../../d7/d24/diploid_fixed_sh_8cc-example.html#a8">diploid_fixed_sh.cc</a>, <a class="el" href="../../d3/da0/diploid_gzbinaryIO_8cc-example.html#a8">diploid_gzbinaryIO.cc</a>, <a class="el" href="../../dd/da1/diploid_twopop_mig_8cc-example.html#a8">diploid_twopop_mig.cc</a>, <a class="el" href="../../d3/d0a/RHH_8cc-example.html#a7">RHH.cc</a>, and <a class="el" href="../../dc/d1a/TFL2013_8cc-example.html#a7">TFL2013.cc</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d81/diploid_8cc-example.html#a17">diploid.cc</a>, <a class="el" href="../../d7/dd8/diploid_binaryIO_8cc-example.html#a26">diploid_binaryIO.cc</a>, <a class="el" href="../../d7/d24/diploid_fixed_sh_8cc-example.html#a12">diploid_fixed_sh.cc</a>, <a class="el" href="../../d3/da0/diploid_gzbinaryIO_8cc-example.html#a26">diploid_gzbinaryIO.cc</a>, <a class="el" href="../../dd/da1/diploid_twopop_mig_8cc-example.html#a20">diploid_twopop_mig.cc</a>, <a class="el" href="../../d3/d0a/RHH_8cc-example.html#a15">RHH.cc</a>, and <a class="el" href="../../dc/d1a/TFL2013_8cc-example.html#a19">TFL2013.cc</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1848,7 +1849,7 @@ template&lt;typename mutation_type , typename vector_type_allocator1 , typename 
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d81/diploid_8cc-example.html#a5">diploid.cc</a>, <a class="el" href="../../d7/dd8/diploid_binaryIO_8cc-example.html#a5">diploid_binaryIO.cc</a>, <a class="el" href="../../d6/d0a/diploid_binaryIO_ind_8cc-example.html#a6">diploid_binaryIO_ind.cc</a>, <a class="el" href="../../d7/d24/diploid_fixed_sh_8cc-example.html#a5">diploid_fixed_sh.cc</a>, <a class="el" href="../../df/df6/diploid_fixed_sh_ind_8cc-example.html#a7">diploid_fixed_sh_ind.cc</a>, <a class="el" href="../../d3/da0/diploid_gzbinaryIO_8cc-example.html#a5">diploid_gzbinaryIO.cc</a>, <a class="el" href="../../d6/d1e/diploid_gzbinaryIO_ind_8cc-example.html#a6">diploid_gzbinaryIO_ind.cc</a>, <a class="el" href="../../db/de9/diploid_ind_8cc-example.html#a6">diploid_ind.cc</a>, <a class="el" href="../../dd/da1/diploid_twopop_mig_8cc-example.html#a5">diploid_twopop_mig.cc</a>, <a class="el" href="../../db/d2e/migsel_ind_8cc-example.html#a8">migsel_ind.cc</a>, <a class="el" href="../../d3/d0a/RHH_8cc-example.html#a4">RHH.cc</a>, and <a class="el" href="../../dc/d1a/TFL2013_8cc-example.html#a3">TFL2013.cc</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d81/diploid_8cc-example.html#a14">diploid.cc</a>, <a class="el" href="../../d7/dd8/diploid_binaryIO_8cc-example.html#a23">diploid_binaryIO.cc</a>, <a class="el" href="../../d6/d0a/diploid_binaryIO_ind_8cc-example.html#a24">diploid_binaryIO_ind.cc</a>, <a class="el" href="../../d7/d24/diploid_fixed_sh_8cc-example.html#a9">diploid_fixed_sh.cc</a>, <a class="el" href="../../df/df6/diploid_fixed_sh_ind_8cc-example.html#a11">diploid_fixed_sh_ind.cc</a>, <a class="el" href="../../d3/da0/diploid_gzbinaryIO_8cc-example.html#a23">diploid_gzbinaryIO.cc</a>, <a class="el" href="../../d6/d1e/diploid_gzbinaryIO_ind_8cc-example.html#a24">diploid_gzbinaryIO_ind.cc</a>, <a class="el" href="../../db/de9/diploid_ind_8cc-example.html#a15">diploid_ind.cc</a>, <a class="el" href="../../dd/da1/diploid_twopop_mig_8cc-example.html#a17">diploid_twopop_mig.cc</a>, <a class="el" href="../../db/d2e/migsel_ind_8cc-example.html#a24">migsel_ind.cc</a>, <a class="el" href="../../d3/d0a/RHH_8cc-example.html#a12">RHH.cc</a>, and <a class="el" href="../../dc/d1a/TFL2013_8cc-example.html#a15">TFL2013.cc</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1999,7 +2000,7 @@ template&lt;typename gamete_type , typename vector_type_allocator , template&lt;
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d81/diploid_8cc-example.html#a2">diploid.cc</a>, <a class="el" href="../../d7/dd8/diploid_binaryIO_8cc-example.html#a2">diploid_binaryIO.cc</a>, <a class="el" href="../../d6/d0a/diploid_binaryIO_ind_8cc-example.html#a2">diploid_binaryIO_ind.cc</a>, <a class="el" href="../../d7/d24/diploid_fixed_sh_8cc-example.html#a2">diploid_fixed_sh.cc</a>, <a class="el" href="../../df/df6/diploid_fixed_sh_ind_8cc-example.html#a3">diploid_fixed_sh_ind.cc</a>, <a class="el" href="../../d3/da0/diploid_gzbinaryIO_8cc-example.html#a2">diploid_gzbinaryIO.cc</a>, <a class="el" href="../../d6/d1e/diploid_gzbinaryIO_ind_8cc-example.html#a2">diploid_gzbinaryIO_ind.cc</a>, <a class="el" href="../../db/de9/diploid_ind_8cc-example.html#a2">diploid_ind.cc</a>, <a class="el" href="../../dd/da1/diploid_twopop_mig_8cc-example.html#a3">diploid_twopop_mig.cc</a>, <a class="el" href="../../db/d2e/migsel_ind_8cc-example.html#a5">migsel_ind.cc</a>, <a class="el" href="../../de/d58/pfix_8cc-example.html#a2">pfix.cc</a>, <a class="el" href="../../d3/d0a/RHH_8cc-example.html#a1">RHH.cc</a>, and <a class="el" href="../../dc/d1a/TFL2013_8cc-example.html#a1">TFL2013.cc</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d81/diploid_8cc-example.html#a11">diploid.cc</a>, <a class="el" href="../../d7/dd8/diploid_binaryIO_8cc-example.html#a20">diploid_binaryIO.cc</a>, <a class="el" href="../../d6/d0a/diploid_binaryIO_ind_8cc-example.html#a20">diploid_binaryIO_ind.cc</a>, <a class="el" href="../../d7/d24/diploid_fixed_sh_8cc-example.html#a6">diploid_fixed_sh.cc</a>, <a class="el" href="../../df/df6/diploid_fixed_sh_ind_8cc-example.html#a7">diploid_fixed_sh_ind.cc</a>, <a class="el" href="../../d3/da0/diploid_gzbinaryIO_8cc-example.html#a20">diploid_gzbinaryIO.cc</a>, <a class="el" href="../../d6/d1e/diploid_gzbinaryIO_ind_8cc-example.html#a20">diploid_gzbinaryIO_ind.cc</a>, <a class="el" href="../../db/de9/diploid_ind_8cc-example.html#a11">diploid_ind.cc</a>, <a class="el" href="../../dd/da1/diploid_twopop_mig_8cc-example.html#a15">diploid_twopop_mig.cc</a>, <a class="el" href="../../db/d2e/migsel_ind_8cc-example.html#a21">migsel_ind.cc</a>, <a class="el" href="../../de/d58/pfix_8cc-example.html#a10">pfix.cc</a>, <a class="el" href="../../d3/d0a/RHH_8cc-example.html#a9">RHH.cc</a>, and <a class="el" href="../../dc/d1a/TFL2013_8cc-example.html#a13">TFL2013.cc</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2154,7 +2155,7 @@ template&lt;typename gamete_type , typename gamete_list_type_allocator , typenam
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const mutation_model &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp;&#160;</td>
           <td class="paramname"><em>mmodel</em>, </td>
         </tr>
         <tr>
@@ -2478,7 +2479,7 @@ template&lt;typename gamete_type , typename gamete_list_type_allocator , typenam
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const mutation_model &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp;&#160;</td>
           <td class="paramname"><em>mmodel</em>, </td>
         </tr>
         <tr>
@@ -2716,7 +2717,7 @@ template&lt;typename gamete_type , typename metapop_gamete_vector_type_allocator
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const mutation_model &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp;&#160;</td>
           <td class="paramname"><em>mmodel</em>, </td>
         </tr>
         <tr>
@@ -2901,7 +2902,7 @@ template&lt;typename gamete_type , typename metapop_gamete_vector_type_allocator
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const mutation_model &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp;&#160;</td>
           <td class="paramname"><em>mmodel</em>, </td>
         </tr>
         <tr>
@@ -3300,7 +3301,7 @@ template&lt;typename gamete_type , typename vector_type_allocator , template&lt;
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d2e/migsel_ind_8cc-example.html#a10">migsel_ind.cc</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d2e/migsel_ind_8cc-example.html#a26">migsel_ind.cc</a>.</dd>
 </dl>
 </div>
 </div>
@@ -3387,7 +3388,7 @@ template&lt;typename gamete_type , typename vector_type_allocator , template&lt;
         </tr>
       </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/dd8/diploid_binaryIO_8cc-example.html#a9">diploid_binaryIO.cc</a>, <a class="el" href="../../d6/d0a/diploid_binaryIO_ind_8cc-example.html#a7">diploid_binaryIO_ind.cc</a>, <a class="el" href="../../d3/da0/diploid_gzbinaryIO_8cc-example.html#a9">diploid_gzbinaryIO.cc</a>, and <a class="el" href="../../d6/d1e/diploid_gzbinaryIO_ind_8cc-example.html#a7">diploid_gzbinaryIO_ind.cc</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/dd8/diploid_binaryIO_8cc-example.html#a27">diploid_binaryIO.cc</a>, <a class="el" href="../../d6/d0a/diploid_binaryIO_ind_8cc-example.html#a25">diploid_binaryIO_ind.cc</a>, <a class="el" href="../../d3/da0/diploid_gzbinaryIO_8cc-example.html#a27">diploid_gzbinaryIO.cc</a>, and <a class="el" href="../../d6/d1e/diploid_gzbinaryIO_ind_8cc-example.html#a25">diploid_gzbinaryIO_ind.cc</a>.</dd>
 </dl>
 </div>
 </div>

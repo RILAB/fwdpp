@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['n',['n',['../d1/da4/structKTfwd_1_1mutation__base.html#a9df75224a5f00b97dc09e68b475a517a',1,'KTfwd::mutation_base::n()'],['../d6/d90/structKTfwd_1_1gamete__base.html#aa89b6422373719ef4888b71d40824190',1,'KTfwd::gamete_base::n()']]],
-  ['n_5fis_5fzero',['n_is_zero',['../d4/dc3/structKTfwd_1_1n__is__zero.html',1,'KTfwd']]],
-  ['neutral',['neutral',['../d1/da4/structKTfwd_1_1mutation__base.html#acfb3b4c94516cbbc5c28a12e1ad575b3',1,'KTfwd::mutation_base']]],
-  ['no_5fselection',['no_selection',['../dc/d0b/structKTfwd_1_1no__selection.html',1,'KTfwd']]]
+  ['label',['label',['../de/d4d/structmutation__with__age.html#aa03aa802b0d07bd62b4cfbbd2da6bcce',1,'mutation_with_age']]],
+  ['lookup_5ftable_5ftype',['lookup_table_type',['../d8/d48/bneck__selection__dist_8cc.html#a0731e2ed14d3858427a2552e4944b778',1,'lookup_table_type():&#160;bneck_selection_dist.cc'],['../d3/dab/common__gamete_8hpp.html#a879096def42aa5e94c7443124fc1af30',1,'lookup_table_type():&#160;common_gamete.hpp'],['../df/d10/common__ind_8hpp.html#a879096def42aa5e94c7443124fc1af30',1,'lookup_table_type():&#160;common_ind.hpp']]]
 ];

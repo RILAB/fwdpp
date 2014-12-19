@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,19 +88,136 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">KTfwd::fwdpp_internal Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Nested namespace for nuts and bolts of certain library functions.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4a/structKTfwd_1_1fwdpp__internal_1_1gsl__ran__discrete__t__deleter.html">gsl_ran_discrete_t_deleter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a918c9bb71df790dfa5e93683339620f2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dbd/namespaceKTfwd_1_1fwdpp__internal.html#a918c9bb71df790dfa5e93683339620f2">gsl_ran_discrete_t_ptr</a> = std::unique_ptr&lt; gsl_ran_discrete_t, <a class="el" href="../../dc/d4a/structKTfwd_1_1fwdpp__internal_1_1gsl__ran__discrete__t__deleter.html">gsl_ran_discrete_t_deleter</a> &gt;</td></tr>
+<tr class="separator:a918c9bb71df790dfa5e93683339620f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a416cc435f714e2ab6c5d52e79e56ed39"><td class="memTemplParams" colspan="2">template&lt;typename gamete_type , typename mutation_iterator &gt; </td></tr>
+<tr class="memitem:a416cc435f714e2ab6c5d52e79e56ed39"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/dbd/namespaceKTfwd_1_1fwdpp__internal.html#a416cc435f714e2ab6c5d52e79e56ed39">add_new_mutation</a> (mutation_iterator &amp;mitr, gamete_type &amp;new_gamete)</td></tr>
+<tr class="separator:a416cc435f714e2ab6c5d52e79e56ed39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3acc05aef846d0b704f5208bba37c316"><td class="memTemplParams" colspan="2">template&lt;typename mutation_model , typename mutation_insertion_policy , typename mlist_type , typename gamete_type &gt; </td></tr>
+<tr class="memitem:a3acc05aef846d0b704f5208bba37c316"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/dbd/namespaceKTfwd_1_1fwdpp__internal.html#a3acc05aef846d0b704f5208bba37c316">add_N_mutations</a> (const <a class="el" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp;mmodel, const mutation_insertion_policy &amp;mpolicy, const unsigned &amp;n, mlist_type *mutations, gamete_type &amp;g)</td></tr>
+<tr class="separator:a3acc05aef846d0b704f5208bba37c316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac48625abcee7f808a28ab9a2867ce9bb"><td class="memTemplParams" colspan="2">template&lt;typename itr_type , typename cont_type &gt; </td></tr>
 <tr class="memitem:ac48625abcee7f808a28ab9a2867ce9bb"><td class="memTemplItemLeft" align="right" valign="top">itr_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/dbd/namespaceKTfwd_1_1fwdpp__internal.html#ac48625abcee7f808a28ab9a2867ce9bb">rec_gam_updater</a> (itr_type __first, itr_type __last, cont_type &amp;m1, cont_type &amp;m2, const short &amp;SWITCH, const double &amp;val)</td></tr>
 <tr class="separator:ac48625abcee7f808a28ab9a2867ce9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69903516668af1fd65d939af52d4588d"><td class="memTemplParams" colspan="2">template&lt;typename double_vec_type , typename gamete_type , typename gamete_cont_iterator &gt; </td></tr>
+<tr class="memitem:a69903516668af1fd65d939af52d4588d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/dbd/namespaceKTfwd_1_1fwdpp__internal.html#a69903516668af1fd65d939af52d4588d">recombine_gametes</a> (const double_vec_type &amp;pos, gamete_cont_iterator &amp;ibeg, gamete_cont_iterator &amp;jbeg, gamete_type &amp;new_gamete1, gamete_type &amp;new_gamete2)</td></tr>
+<tr class="separator:a69903516668af1fd65d939af52d4588d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Nested namespace for nuts and bolts of certain library functions. </p>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a918c9bb71df790dfa5e93683339620f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../de/dbd/namespaceKTfwd_1_1fwdpp__internal.html#a918c9bb71df790dfa5e93683339620f2">KTfwd::fwdpp_internal::gsl_ran_discrete_t_ptr</a> = typedef std::unique_ptr&lt; gsl_ran_discrete_t, <a class="el" href="../../dc/d4a/structKTfwd_1_1fwdpp__internal_1_1gsl__ran__discrete__t__deleter.html">gsl_ran_discrete_t_deleter</a> &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section warning"><dt>Warning</dt><dd>Can only be put into a vector by push_back/emplace back because of constraints on std::unique_ptr assignment </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a3acc05aef846d0b704f5208bba37c316"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename mutation_model , typename mutation_insertion_policy , typename mlist_type , typename gamete_type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void KTfwd::fwdpp_internal::add_N_mutations </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp;&#160;</td>
+          <td class="paramname"><em>mmodel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const mutation_insertion_policy &amp;&#160;</td>
+          <td class="paramname"><em>mpolicy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned &amp;&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mlist_type *&#160;</td>
+          <td class="paramname"><em>mutations</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gamete_type &amp;&#160;</td>
+          <td class="paramname"><em>g</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Apply mutation model N times to a new gamete. Updates mutation list </p>
+
+</div>
+</div>
+<a class="anchor" id="a416cc435f714e2ab6c5d52e79e56ed39"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename gamete_type , typename mutation_iterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void KTfwd::fwdpp_internal::add_new_mutation </td>
+          <td>(</td>
+          <td class="paramtype">mutation_iterator &amp;&#160;</td>
+          <td class="paramname"><em>mitr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gamete_type &amp;&#160;</td>
+          <td class="paramname"><em>new_gamete</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Mechanics of adding a new mutation. We do this odd choosing between find_if and upper_bound b/c of the way the GCC STL is implemented.</p>
+<p>Objectively, upper_bound should always be preferred, but that is not the case in practice because the GNU STL implements find_if in a very clever way for small containers. </p>
+
+</div>
+</div>
 <a class="anchor" id="ac48625abcee7f808a28ab9a2867ce9bb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -142,6 +259,52 @@ template&lt;typename itr_type , typename cont_type &gt; </div>
           <td></td>
           <td class="paramtype">const double &amp;&#160;</td>
           <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a69903516668af1fd65d939af52d4588d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename double_vec_type , typename gamete_type , typename gamete_cont_iterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void KTfwd::fwdpp_internal::recombine_gametes </td>
+          <td>(</td>
+          <td class="paramtype">const double_vec_type &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gamete_cont_iterator &amp;&#160;</td>
+          <td class="paramname"><em>ibeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gamete_cont_iterator &amp;&#160;</td>
+          <td class="paramname"><em>jbeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gamete_type &amp;&#160;</td>
+          <td class="paramname"><em>new_gamete1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gamete_type &amp;&#160;</td>
+          <td class="paramname"><em>new_gamete2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

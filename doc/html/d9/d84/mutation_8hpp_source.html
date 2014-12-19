@@ -64,6 +64,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="../../files.html"><span>File&#160;List</span></a></li>
+      <li><a href="../../globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -115,7 +116,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    \param mpolicy Policy determining how new mutations are added to the population</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">   */</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">template</span>&lt; <span class="keyword">typename</span> gamete_type,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">typename</span> mutation_model,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">typename</span> <a class="code" href="../../d0/d35/structmutation__model.html">mutation_model</a>,</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keyword">typename</span> gamete_insertion_policy,</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">typename</span> mutation_insertion_policy,</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">typename</span> vector_type_allocator,</div>
@@ -126,7 +127,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                  vector_type&lt;gamete_type,vector_type_allocator &gt; * gametes, </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                  list_type&lt;typename gamete_type::mutation_type,list_type_allocator &gt; * mutations, </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                  <span class="keyword">const</span> <span class="keywordtype">double</span> &amp; mu,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                  <span class="keyword">const</span> mutation_model &amp; mmodel,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                  <span class="keyword">const</span> <a class="code" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp; mmodel,</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                  <span class="keyword">const</span> gamete_insertion_policy &amp; gpolicy, </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                  <span class="keyword">const</span> mutation_insertion_policy &amp; mpolicy);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"></span></div>
@@ -146,7 +147,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">    \return An iterator to the newly-created gamete, or to g if no mutation occurs.</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">   */</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">template</span>&lt; <span class="keyword">typename</span> iterator_type,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keyword">typename</span> mutation_model,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keyword">typename</span> <a class="code" href="../../d0/d35/structmutation__model.html">mutation_model</a>,</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keyword">typename</span> mutation_insertion_policy,</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keyword">typename</span> gamete_insertion_policy,</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keyword">typename</span> list_type_allocator,</div>
@@ -157,7 +158,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                               <span class="keyword">const</span> <span class="keywordtype">double</span> &amp; mu, list_type&lt; typename iterator_type::value_type,list_type_allocator &gt; * gametes,</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                               list_type2&lt;typename iterator_type::value_type::mutation_type,list_type_allocator2 &gt; * mutations, </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                               iterator_type &amp;g,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                               <span class="keyword">const</span> mutation_model &amp;mmodel,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                               <span class="keyword">const</span> <a class="code" href="../../d0/d35/structmutation__model.html">mutation_model</a> &amp;mmodel,</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                               <span class="keyword">const</span> mutation_insertion_policy &amp; mpolicy,</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                               <span class="keyword">const</span> gamete_insertion_policy &amp; gpolicy);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
@@ -165,6 +166,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;fwdpp/mutation.tcc&gt;</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="ttc" id="structmutation__model_html"><div class="ttname"><a href="../../d0/d35/structmutation__model.html">mutation_model</a></div><div class="ttdef"><b>Definition:</b> TFL2013.cc:96</div></div>
 <div class="ttc" id="namespaceKTfwd_html_a9566be0bd568e2e75b02b1f46457c25c"><div class="ttname"><a href="../../da/d8b/namespaceKTfwd.html#a9566be0bd568e2e75b02b1f46457c25c">KTfwd::mutate</a></div><div class="ttdeci">unsigned mutate(gsl_rng *r, vector_type&lt; gamete_type, vector_type_allocator &gt; *gametes, list_type&lt; typename gamete_type::mutation_type, list_type_allocator &gt; *mutations, const double &amp;mu, const mutation_model &amp;mmodel, const gamete_insertion_policy &amp;gpolicy, const mutation_insertion_policy &amp;mpolicy)</div></div>
 <div class="ttc" id="namespaceKTfwd_html_a949b79d4df5bc10c6c1b31d311e4a392"><div class="ttname"><a href="../../da/d8b/namespaceKTfwd.html#a949b79d4df5bc10c6c1b31d311e4a392">KTfwd::mutate_gamete</a></div><div class="ttdeci">iterator_type mutate_gamete(gsl_rng *r, const double &amp;mu, list_type&lt; typename iterator_type::value_type, list_type_allocator &gt; *gametes, list_type2&lt; typename iterator_type::value_type::mutation_type, list_type_allocator2 &gt; *mutations, iterator_type &amp;g, const mutation_model &amp;mmodel, const mutation_insertion_policy &amp;mpolicy, const gamete_insertion_policy &amp;gpolicy)</div><div class="ttdoc">Apply mutation model to an individual gamete. Used for individual-based forward simulations. </div></div>
 <div class="ttc" id="forward__types_8hpp_html"><div class="ttname"><a href="../../d5/d1d/forward__types_8hpp.html">forward_types.hpp</a></div></div>

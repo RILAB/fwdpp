@@ -64,6 +64,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="../../files.html"><span>File&#160;List</span></a></li>
+      <li><a href="../../globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -96,101 +97,103 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../d5/d1d/forward__types_8hpp.html">fwdpp/forward_types.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;Sequence/SimData.hpp&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>KTfwd</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{<span class="comment"></span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">  /*! \brief Initialize a population with results from a coalescent simulation</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    Takes an object of type Sequence::SimData from libsequence</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    and initialized a population</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    \param d  A Sequence::SimData object</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    \param gametes Destination for gametes</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    \param mutations Destination for mutations</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    \param max_chroms The max number of gametes to read from d.  Default is std::numeric_limits&lt;unsigned&gt;::max()</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    \note: It can be problematic using the ouptut from simulators that write to ASCI (plain text) files.  If mutation</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    positions are on the interval [0,1), then rounding during write will often truncate such that the data look like</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    there are two mutations at the same site.  This function attempts to control that in the following way:  If </span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    three mutations in the file are at positions A, A, and B, then the positions are converted to ,A, A + (B-A)/2, and B.</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">template</span>&lt; <span class="keyword">typename</span> gamete_type,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">typename</span> vector_allocator_type,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keyword">typename</span> mutation_type,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keyword">typename</span> list_allocator_type,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keyword">template</span>&lt;<span class="keyword">typename</span>,<span class="keyword">typename</span>&gt; <span class="keyword">class </span>vector_type,</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">template</span>&lt;<span class="keyword">typename</span>,<span class="keyword">typename</span>&gt; <span class="keyword">class </span>list_type &gt;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../da/d8b/namespaceKTfwd.html#af05d39195307329f16205963a265b41f">   34</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="../../da/d8b/namespaceKTfwd.html#af05d39195307329f16205963a265b41f">init_with_ms</a>( Sequence::SimData &amp; d,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                     vector_type&lt;gamete_type,vector_allocator_type&gt; * gametes,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                     list_type&lt;mutation_type,list_allocator_type&gt; * mutations,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                     <span class="keyword">const</span> <span class="keywordtype">unsigned</span> &amp; max_chroms = std::numeric_limits&lt;unsigned&gt;::max())</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">typedef</span> list_type&lt;mutation_type,list_allocator_type&gt; MLIST_TYPE;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">      add the mutations to the list.</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">      We create a lookup table of position -&gt; pointer to mutations,</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">      to keep the search time logarithmic rather than linear </span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">      later on.   This makes a HUGE speed difference.</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::map&lt;double,typename  MLIST_TYPE::iterator&gt; mutlookup;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">unsigned</span> site=0;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span>( Sequence::SimData::pos_iterator i = d.pbegin() ; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;         i != d.pend() ; ++i,++site )</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">//is it a seg site in the first max_chroms?</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">unsigned</span> c=0;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> ind=0;ind&lt;std::min(max_chroms,<span class="keywordtype">unsigned</span>(d.size()));++ind)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;          {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">if</span>((d)[ind][site]==<span class="charliteral">&#39;1&#39;</span>)++c;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span>(i &lt; d.pend()-2)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">if</span>(*(i+1) == *(i+2))</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;              {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="comment">//new position value is 1/2 way between i and i+1.</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                *(i+1) = ( (*i) + ( (*(i+1)-*i)/2. ) );</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;              }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span>(c)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;          {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keyword">typename</span> MLIST_TYPE::iterator itr = mutations-&gt;insert(mutations-&gt;end(),</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                                                  mutation_type(*i,0,0));</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            assert( mutlookup.find(*i) == mutlookup.end() );</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            mutlookup.insert(std::make_pair(*i,itr));</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;          }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">//Figure out the unique set of gametes, and how frequent they are</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::set&lt;std::string&gt; ugams(d.begin(),std::min(d.begin()+max_chroms+1,d.end()));</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">for</span>(std::set&lt;std::string&gt;::const_iterator i = ugams.begin(); i != ugams.end() ; ++i )</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">unsigned</span> c = std::count(d.begin(),std::min(d.begin()+max_chroms,d.end()),*i);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">//now, create this gamete and fill its neutral mutations list</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        gamete_type g(c);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">for</span>( std::string::const_iterator j = i-&gt;begin() ; j != i-&gt;end() ; ++j )</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;          {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">if</span>( *j == <span class="charliteral">&#39;1&#39;</span> )<span class="comment">//is a derived mutation</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;              {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordtype">double</span> pos = *(d.pbegin() + (j-i-&gt;begin()));</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="comment">//find the mutation in the mutations list</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keywordflow">if</span>( mutlookup.find(pos) != mutlookup.end() )</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                  {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    mutlookup[pos]-&gt;n += c;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    g.mutations.push_back(mutlookup[pos]);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                  }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;              }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        gametes-&gt;push_back(g);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    ugams.erase(ugams.begin(),ugams.end());</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}<span class="comment">// ns KRTfwd</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="namespaceKTfwd_html_af05d39195307329f16205963a265b41f"><div class="ttname"><a href="../../da/d8b/namespaceKTfwd.html#af05d39195307329f16205963a265b41f">KTfwd::init_with_ms</a></div><div class="ttdeci">void init_with_ms(Sequence::SimData &amp;d, vector_type&lt; gamete_type, vector_allocator_type &gt; *gametes, list_type&lt; mutation_type, list_allocator_type &gt; *mutations, const unsigned &amp;max_chroms=std::numeric_limits&lt; unsigned &gt;::max())</div><div class="ttdoc">Initialize a population with results from a coalescent simulation Takes an object of type Sequence::S...</div><div class="ttdef"><b>Definition:</b> initms.hpp:34</div></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;Sequence/SimData.hpp&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>KTfwd</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{<span class="comment"></span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">  /*! \brief Initialize a population with results from a coalescent simulation</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    Takes an object of type Sequence::SimData from libsequence</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    and initialized a population</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    \param d  A Sequence::SimData object</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    \param gametes Destination for gametes</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    \param mutations Destination for mutations</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    \param max_chroms The max number of gametes to read from d.  Default is std::numeric_limits&lt;unsigned&gt;::max()</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    \note: It can be problematic using the ouptut from simulators that write to ASCI (plain text) files.  If mutation</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    positions are on the interval [0,1), then rounding during write will often truncate such that the data look like</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    there are two mutations at the same site.  This function attempts to control that in the following way:  If </span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    three mutations in the file are at positions A, A, and B, then the positions are converted to ,A, A + (B-A)/2, and B.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">template</span>&lt; <span class="keyword">typename</span> gamete_type,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keyword">typename</span> vector_allocator_type,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keyword">typename</span> mutation_type,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">typename</span> list_allocator_type,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keyword">template</span>&lt;<span class="keyword">typename</span>,<span class="keyword">typename</span>&gt; <span class="keyword">class </span>vector_type,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">template</span>&lt;<span class="keyword">typename</span>,<span class="keyword">typename</span>&gt; <span class="keyword">class </span>list_type &gt;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../da/d8b/namespaceKTfwd.html#af05d39195307329f16205963a265b41f">   36</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="../../da/d8b/namespaceKTfwd.html#af05d39195307329f16205963a265b41f">init_with_ms</a>( Sequence::SimData &amp; d,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                     vector_type&lt;gamete_type,vector_allocator_type&gt; * gametes,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                     list_type&lt;mutation_type,list_allocator_type&gt; * mutations,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                     <span class="keyword">const</span> <span class="keywordtype">unsigned</span> &amp; max_chroms = std::numeric_limits&lt;unsigned&gt;::max())</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">typedef</span> list_type&lt;mutation_type,list_allocator_type&gt; MLIST_TYPE;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">      add the mutations to the list.</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">      We create a lookup table of position -&gt; pointer to mutations,</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">      to keep the search time logarithmic rather than linear </span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">      later on.   This makes a HUGE speed difference.</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    std::map&lt;double,typename  MLIST_TYPE::iterator&gt; mutlookup;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">unsigned</span> site=0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">for</span>( Sequence::SimData::pos_iterator i = d.pbegin() ; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;         i != d.pend() ; ++i,++site )</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">//is it a seg site in the first max_chroms?</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">unsigned</span> c=0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> ind=0;ind&lt;std::min(max_chroms,<span class="keywordtype">unsigned</span>(d.size()));++ind)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">if</span>((d)[ind][site]==<span class="charliteral">&#39;1&#39;</span>)++c;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span>(i &lt; d.pend()-2)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;          {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">if</span>(*(i+1) == *(i+2))</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;              {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="comment">//new position value is 1/2 way between i and i+1.</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                *(i+1) = ( (*i) + ( (*(i+1)-*i)/2. ) );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;              }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;          }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">if</span>(c)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;          {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keyword">typename</span> MLIST_TYPE::iterator itr = mutations-&gt;insert(mutations-&gt;end(),</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                                                  mutation_type(*i,0,0));</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            assert( mutlookup.find(*i) == mutlookup.end() );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            mutlookup.insert(std::make_pair(*i,itr));</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;          }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">//Figure out the unique set of gametes, and how frequent they are</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::set&lt;std::string&gt; ugams(d.begin(),std::min(d.begin()+max_chroms+1,d.end()));</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">for</span>(std::set&lt;std::string&gt;::const_iterator i = ugams.begin(); i != ugams.end() ; ++i )</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">unsigned</span> c = std::count(d.begin(),std::min(d.begin()+max_chroms,d.end()),*i);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">//now, create this gamete and fill its neutral mutations list</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        gamete_type g(c);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">for</span>( std::string::const_iterator j = i-&gt;begin() ; j != i-&gt;end() ; ++j )</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;          {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">if</span>( *j == <span class="charliteral">&#39;1&#39;</span> )<span class="comment">//is a derived mutation</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;              {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keywordtype">double</span> pos = *(d.pbegin() + (j-i-&gt;begin()));</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="comment">//find the mutation in the mutations list</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keywordflow">if</span>( mutlookup.find(pos) != mutlookup.end() )</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                  {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    mutlookup[pos]-&gt;n += c;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    g.mutations.push_back(mutlookup[pos]);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                  }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;              }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;          }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        gametes-&gt;push_back(g);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    ugams.erase(ugams.begin(),ugams.end());</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}<span class="comment">// ns KRTfwd</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespaceKTfwd_html_af05d39195307329f16205963a265b41f"><div class="ttname"><a href="../../da/d8b/namespaceKTfwd.html#af05d39195307329f16205963a265b41f">KTfwd::init_with_ms</a></div><div class="ttdeci">void init_with_ms(Sequence::SimData &amp;d, vector_type&lt; gamete_type, vector_allocator_type &gt; *gametes, list_type&lt; mutation_type, list_allocator_type &gt; *mutations, const unsigned &amp;max_chroms=std::numeric_limits&lt; unsigned &gt;::max())</div><div class="ttdoc">Initialize a population with results from a coalescent simulation Takes an object of type Sequence::S...</div><div class="ttdef"><b>Definition:</b> initms.hpp:36</div></div>
 <div class="ttc" id="forward__types_8hpp_html"><div class="ttname"><a href="../../d5/d1d/forward__types_8hpp.html">forward_types.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

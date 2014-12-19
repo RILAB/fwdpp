@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>fwdpp: Introduction</title>
+<title>fwdpp: Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -78,56 +78,275 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Introduction </div>  </div>
+<div class="title">fwdpp Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="purpose"></a>
-Purpose</h1>
-<p>This page is the documentation for fwdpp, A C++ template library for efficient simulation of large populations with mutation, recombination, selection and migration.</p>
-<p>The library exists in namespace <a class="el" href="da/d8b/namespaceKTfwd.html" title="The main (only) namespace defined by this library. ">KTfwd</a>.</p>
-<h2><a class="anchor" id="dependencies"></a>
-Dependencies On Other Libraries</h2>
-<p>fwdpp depends on the following: <br/>
-</p>
+<div class="textblock"><p>fwdpp - A C++ template library for forward-time population genetic simulations</p>
+<p>Copyright (C) 2013 Kevin Thornton</p>
+<p>fwdpp is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA</p>
+<p>Comments are welcome. </p>
+<pre class="fragment">    - Kevin Thornton &lt;krthornt@uci.edu&gt;
+</pre><p>#Preface</p>
+<p>This README corresponds to fwdpp 0.2.5. Currently, there has been no offical release of 0.2.5, but the code base is considered tested/stable, and hence is available as the "master" branch via github. See the revision history below for changes in this release.</p>
+<p>#Introduction</p>
+<p>fwdpp is a C++ template library that abstracts the basic operations required to implement forward-time simulations of population- and quantitative-genetic models. The library allows the simulation of single populations or metapopulations evolving under the standard evolutionary forces of drift, recombination, migration, and natural selection. Arbitrary population size changes are also allowed. Different populations in a metapopulation may evolve under different fitness schemes.</p>
+<p>The library uses advanced C++ techniques to allow arbitrary models to be implemented via the implementation of simple policies (see Documentation section below). A programmer wishing to use the library will need a strong background in templates, function objects, and the Standard Template Library (STL). Web resources for these topics vary too much in quality to recommend any particular one. However, there are several classic books that are must-reads for C++ programmers (old school, I know):</p>
 <ol type="1">
-<li>libsequence, available from www.molpopgen.org <br/>
-</li>
-<li>The GNU Scientific library, available from www.gnu.org/software/gsl <br/>
-</li>
-<li>The zlib compression library (zlib.net).</li>
-<li>By default, fwdpp depends on the boost C++ libraries from www.boost.org. However, the use of boost in programs using fwdpp may be disabled by passing -DUSE_STANDARD_CONTAINERS to the C++ preprocessor.</li>
+<li>Scott Meyer's "trilogy" of "Effective C++", "More Effective C++", and "Effective STL".</li>
+<li>Nicolai Josuttis' "The C++ Standard Template Library"</li>
+<li>David Vandevoorde and and Nicolai Josuttis, "C++ Templates"</li>
 </ol>
-<h2><a class="anchor" id="examples"></a>
-How to use the library</h2>
-<p>The best way to start will be to study the examples provided with the library and the <a class="el" href="d0/db1/page1.html">Tutorial</a>. Regarding the examples, I would suggest doing so in the following order: <br/>
-</p>
+<p>The first two are excellent books for people already familiar with C++ syntax but want to know more about effective software design using the language. Meyer's books are particularly good, espectially the first two. The C++ Templates book is a bible of how to get the most out of templates. It is a very advanced and detailed book, but I've found it helpful over the years.</p>
+<h2>A note about which version to use</h2>
+<p>This code is distributed via my gitub <a href="http://www.github.com/molpopgen">account</a>. The "master" and "dev" branches should be viewed as experimental. The <a href="https://github.com/molpopgen/fwdpp/releases">releases</a>, however, correspond to tested versions of the library fit for public consumption. This means that, while the version number in the configure script on master/dev may match that of a recent release, <em>that does not mean that the features/stability/bugs present in master/dev are identical to those of the release.</em> If you want to use fwdpp for research, use the latest <a href="https://github.com/molpopgen/fwdpp/releases">release</a>. If you want to play around with the latest and (occasionally not-so) greatest, look at the dev branch. If you want to look at the latest I believe to be stable, look at master. Also note that master may be ahead of dev, etc., depending on what I've committed from my development server to the repo stored at github.</p>
+<h3>Revision history</h3>
+<p>Specific version numbers ("tags" in git-ese, a.k.a. "releases") will occur when new feature are added to the library and/or bugs are fixed. The details of what happens in each release can be found <a class="el" href="d9/de4/RELEASE__NOTES_8md.html">here</a>, beginning with release 0.2.4.</p>
+<h2>Which C++?</h2>
+<p>As of version 0.2.5, fwdpp requires a compiler supporting the "C++11" version of the language. Currently, fwdpp requires that your compiler support the flag -std=c++11 in order to use c++11 language features. Recent version of GCC (4.7 or greater) and clang (3.4 or greater, but I've not checked earlier versions) both support this option, which covers most Linux and OS X users.</p>
+<h2>Citation</h2>
+<p>The fwdpp manuscript has been accepted for publication in Genetics. The accepted version of the manuscript is <a href="http://www.genetics.org/content/early/2014/06/19/genetics.114.165019.abstract">here</a>. For LaTeX users:</p>
+<div class="fragment"><div class="line">@Article{,</div>
+<div class="line">  author =       {K. R. Thornton},</div>
+<div class="line">  title =        {A C++ Template Library <span class="keywordflow">for</span> Efficient Forward-Time Population Genetic Simulation of Large Populations},</div>
+<div class="line">  journal =      {Genetics},</div>
+<div class="line">  year =         {2014},</div>
+<div class="line">  OPTkey =       {},</div>
+<div class="line">  volume =       {198},</div>
+<div class="line">  OPTnumber =    {},</div>
+<div class="line">  pages =        {157-166},</div>
+<div class="line">  OPTmonth =     {},</div>
+<div class="line">  OPTnote =      {},</div>
+<div class="line">  annote =       {doi:/10.1534/genetics.114.165019}</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The version of fwdpp used in that publication is 0.2.4.</p>
+<p>#Documentation</p>
+<h2>Online</h2>
+<p>A tutorial on policies and the library's reference manual can be found at <a href="http://molpopgen.github.io/fwdpp">molpopgen.github.io/fwdpp</a></p>
+<p><b>Note:</b> the links above may be out of date, as the online documentation are not regenerated automatically. If you want the latest, builds the docs from source.</p>
+<h2>Built from source</h2>
+<p>The source code documentation is in the doc subdirectory that comes with the library. There are two major pieces of documentation. First is the detailed documentation of all library functions. This is generated via <a href="http://www.doxygen.org">doxygen</a>, and the output is a folder called html. To view the documentation, point a browser to html/index.html.</p>
+<p>The second piece of documentation is a tutorial on writing policies conforming to what fwdpp expects. This document is doc/policies.tex and a pdf file of the documentation may be obtained by processing the file as follows:</p>
+<div class="fragment"><div class="line">cd doc</div>
+<div class="line">pdflatex policies</div>
+<div class="line">pdflatex policies</div>
+</div><!-- fragment --><p>One runs pdflatex twice to ensure that cross-references within the document are processed properly.</p>
+<h2>Example documentation</h2>
+<p>The examples can be read in html form via the online reference manual linked to above. You can find the two simplest examples online at the fwdpp <a href="https://github.com/molpopgen/fwdpp/wiki">wiki</a> on github.</p>
+<p>#Dependencies</p>
+<h2>System requirements</h2>
+<p>You must have the following on your system:</p>
 <ol type="1">
-<li>diploid.cc: the most basic simulation of a Wright-Fisher population. This is the most heavily-commented example. Other examples assume that you've studied this one and understand it. <br/>
+<li>A C++ compiler equivalent to gcc 4.6 or greater. On OS X, this likely means that you should be running OS X Mavericks with Xcode installed, and have then installed the command line tools (which is done from within Xcode.)</li>
+<li>Ideally, one should have the <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">git</a> command line tools installed. These are likely already installed on many systems.</li>
+</ol>
+<h2>Library dependencies</h2>
+<p>fwdpp depends upon the following libraries:</p>
+<ol type="1">
+<li><a href="http://www.boost.org">boost</a>. Note: use of boost is optional, but is the default. See below for more info.</li>
+<li><a href="http://gnu.org/software/gsl">GSL</a></li>
+<li><a href="http://zlib.net">zlib</a></li>
+<li><a href="http://github.com/molpopgen/libsequence">libsequence</a>.</li>
+</ol>
+<p>The first three are available as pre-built packages on most Linux distributions. The latter (libsequence) also depends on the first three, and must be built from source.</p>
+<h2>Obtaining the source code</h2>
+<h3>Obtaining the master branch</h3>
+<p>You have a few options:</p>
+<ol type="1">
+<li>Clone the repo (best option): git clone <a href="https://github.com/molpopgen/fwdpp.git">https://github.com/molpopgen/fwdpp.git</a></li>
+<li>Click on "Download Zip" at <a href="https://github.com/molpopgen/fwdpp">https://github.com/molpopgen/fwdpp</a> </li>
+</ol>
+<h3>Obtaining a specific release</h3>
+<p>Again, a few options: </p>
+<ol>
+<li>
+Click on "Releases" at <a href="https://github.com/molpopgen/fwdpp,">https://github.com/molpopgen/fwdpp,</a> then download the one you want  </li>
+<li>
+Clone the repo (see previous section) <ol>
+<li>
+Get a list of releases by saying "git tag -l"  </li>
+<li>
+Checkout the release you want. For example "git checkout 0.2.0" </li>
+</ol>
 </li>
-<li>diploid_binaryIO.cc: The same as diploid.cc but the output is changes to write the entire population to a file. Mutiple processes run on a grid system can write to the same binary file due to use of POSIX file locking routines.<br/>
-</li>
-<li>diploid_fixed_sh.cc: The same as diploid.cc with the addition of a mutation rate to mutations with selection coefficient s and dominance h, with evolution under the multiplicative fitness model<br/>
-</li>
-<li>diploid_twopop_mig.cc: Evolution of a single population which then splits into two, followed by a period of migration.<br/>
-<br/>
-The above examples apply the library's gamete-based sampling algorithm. For models with selection, an individual-based algorithm will typically be faster. The use of fwdpp's individual-based machinery is shown in these example programs:<br/>
-</li>
+</ol>
+<p>#Installation</p>
+<h2>The case of a standard system with all dependencies installed in standard locations</h2>
+<p>If you cloned the git repo: </p>
+<div class="fragment"><div class="line">cd fwdpp</div>
+</div><!-- fragment --><p> If you downloaded a release:</p>
+<div class="fragment"><div class="line">tar xzf fwdpp-version.tar.gz</div>
+<div class="line">cd fwdpp-version</div>
+</div><!-- fragment --><p>Then:</p>
+<div class="fragment"><div class="line">./configure</div>
+<div class="line">make</div>
+<div class="line">make install</div>
+</div><!-- fragment --><h2>To compile examples and install library without boost</h2>
+<div class="fragment"><div class="line">./configure --enable-standard=yes</div>
+<div class="line">make check</div>
+<div class="line">make install</div>
+</div><!-- fragment --><p>The option passed to the configure script will pass -DUSE_STANDARD_CONTAINERS to the C++ preprocessor. This symbol means that the example programs will be built using containers from the C++ standard library rather than from the boost libraries. The effect of this is roughly a 10% performance loss (e.g., simulations will take about 10% longer to run).</p>
+<p>Related to the above note, it is worth installing boost on your system. Many of their libraries, especially program_options, will probably be worth using for simulations that you write.</p>
+<h2>If dependent libraries are in non-stanard locations.</h2>
+<p>For example, if libsequence is in /opt:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#Note, you need to add in the desired optimization (-OXX) level:</span></div>
+<div class="line"><span class="preprocessor"></span>./configure CXXFLAGS=-<span class="stringliteral">&quot;-O2 -I/opt/include&quot;</span> LDFLAGS=<span class="stringliteral">&quot;$LDFLAGS -L/opt/lib&quot;</span></div>
+<div class="line">make check</div>
+<div class="line">make install</div>
+</div><!-- fragment --><h2>Installing in a custom location</h2>
+<div class="fragment"><div class="line">./configure --prefix=/path/2/where/you/want it</div>
+</div><!-- fragment --><p> For example:</p>
+<div class="fragment"><div class="line">./configure --prefix=$HOME</div>
+</div><!-- fragment --><h2>"Fast" installation into a user's $HOME folder</h2>
+<p>If you do not have permission for anything other than a local install, there is a <a href="https://www.github.com/molpopgen/install_libseq">script</a> that will install gsl-1.1.6, boost 1.5.5, and the master branch of libsequence into your home directory. This means that header files end up in $HOME/include and run-time libraries end up in $HOME/lib. (Typically, the "should" be in /usr/local instead of $HOME, but you may not have the permissions to install there).</p>
+<p>First, get libsequence and its dependencies all installed:</p>
+<div class="fragment"><div class="line">git clone https:<span class="comment">//www.github.com/molpopgen/install_libseq.git</span></div>
+<div class="line">cd install_libseq</div>
+<div class="line">bash libseq _ local.sh</div>
+</div><!-- fragment --><p>The above takes a while.</p>
+<p>Now, you can get fwdpp installed. Below, we cover how to install both the master branch or a stable release into $HOME.</p>
+<p>Once installed, you should see the directory $HOME/include/fwdpp, and it should be full of header files. Nothing goes in $HOME/lib.</p>
+<p>To get the master branch from git:</p>
+<div class="fragment"><div class="line">git clone https:<span class="comment">//github.com/molpopgen/fwdpp</span></div>
+<div class="line">cd fwdpp</div>
+<div class="line">./configure --prefix=$HOME CXXFLAGS=<span class="stringliteral">&quot;-O2 -I$HOME/include&quot;</span> LDFLAGS=-L$HOME/lib</div>
+<div class="line">make install</div>
+</div><!-- fragment --><p>Then, you can compile the example programs:</p>
+<div class="fragment"><div class="line">cd examples</div>
+<div class="line">LDFLAGS=-I$HOME/lib make check</div>
+</div><!-- fragment --><p>See below for how to run the examples.</p>
+<p>If you want a stable release of fwdpp (rather than the master branch which may be semi-experimental), click on <a href="https://github.com/molpopgen/fwdpp/releases">releases</a> from the main <a href="https://github.com/molpopgen/fwdpp">project page</a> at github.</p>
+<p>On a decent browser, when you click on a release, it should be called fwdpp-version.tar.gz. Sometimes, though, you may get version.tar.gz. This is a browser-by-github interaction problem. On my systems, I get the correct result.</p>
+<p>Then,</p>
+<div class="fragment"><div class="line">tar xzf fwdpp-version.tar.gz</div>
+<div class="line">cd fwdpp-version</div>
+<div class="line">./configure CXXFLAGS=<span class="stringliteral">&quot;-O2 -I$HOME/include&quot;</span> LDFLAGS=-L$HOME/lib</div>
+<div class="line">make install</div>
+</div><!-- fragment --><p>And now you can compile the examples as described above.</p>
+<h2>Examples</h2>
+<p>The best documentation of how to use the library are the example simulations in the examples/ subdirectory.</p>
+<h3>Compiling the examples:</h3>
+<p>As of fwdpp 0.2.5, the examples are compiled by syaing "make" after the configure step.</p>
+<h3>Running the examples:</h3>
+<p>This following list of parameters and their definitions is in common to all of the example programs:<br/>
+ N = the number of diploid individuals to simulate<br/>
+ theta = 4Nu, where u is the mutation rate per gamete per generation. For example, theta = 100 means that on average, 2Nu = 50 new mutations are entering the population each generation.<br/>
+ rho = 4Nr, where r is the recombination rate per diploid per generation<br/>
+ g = the number of generations to simulate. Often, this should be &gt;= 8N at a minimum<br/>
+ n = the sample size to draw at the end of the simulation. To match the typical modeling assumptions of population genetics, you should have n &lt;&lt; 2N.<br/>
+ nreps = the number of replicates to simulate<br/>
+ seed = a random number seed. I will use $RANDOM as a seed, referring to the bash shell method to return a random integer.<br/>
+</p>
+<p>Note: familiarity with Hudson's "[ms](http://home.uchicago.edu/~rhudson1)" program is helpful for some of what comes below.</p>
+<h4>diploid</h4>
+<p>The first program, diploid, simulates a Wright-Fisher population with mutation, recombination, and drift. To run it:</p>
+<p>./diploid N theta rho g n nreps seed | gzip &gt; outfile.gz</p>
+<p>The data in outfile.gz will be in the same format as Dick Hudson's "ms" coalescent simulator.</p>
+<p>Example:</p>
+<p>./diploid 10000 10 10 100000 50 1 $RANDOM | gzip &gt; test_diploid.gz</p>
+<h4>diploid_ind</h4>
+<p>Identical to diploids, but uses the individual-based sampler. As this program (and diploid) simulate neutral models, this program will typically be slower than that gamete-based implementation when N is large.</p>
+<h4>diploid_binaryIO</h4>
+<p>The next program is called diploid_binaryIO. This program is identical to diploid, except that it only simulates one replicate at a time, creates two output files, and outputs the entire population rather than a sample of size n &lt;&lt; 2N. The first file is an index file, containing an integer representing the replicate number of the output and the position in the haplotypes file where this record begins. The second file is the haplotypes file, which contains the entire population in binary format.</p>
+<p>Usage:</p>
+<p>./diploid_binaryIO N theta rho g replicate_number index_filename haplotype_filename seed.</p>
+<p>Example for Open Grid Engine compute clusters:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#!sh</span></div>
+<div class="line"><span class="preprocessor"></span><span class="preprocessor">#$ -t 1-100</span></div>
+<div class="line"><span class="preprocessor"></span><span class="preprocessor">#$ -N DIPBIN</span></div>
+<div class="line"><span class="preprocessor"></span></div>
+<div class="line">seed=`echo <span class="stringliteral">&quot;$SGE_TASK_ID*$RANDOM&quot;</span>|bc -l`</div>
+</div><!-- fragment --><p>#note: the below assumes that the binary is in the users's $PATH and that the GE system knows how to link it to the relevant dynamic libraries</p>
+<p>diploid_binaryIO 10000 10 10 100000 $SGE_TASK_ID indexfile hapfile $seed</p>
+<p>The above script, when submitted to a Grid Engine queue, will result in 100 populations of size N=10,000 being written to hapfile. Further, “indexfile” will contain the ID number and position of each file. Records are not over-written because the program uses POSIX file locking to ensure that only 1 process at a time can do the writing. This is a complex program, as it mixes C++ objects with output streams such that they can be written to C-style file descriptors, which is required in order to use file locking (which is a C feature with no C++ analog). However, the advantage is that you write all data to one large file, avoiding the plague of lots of small files that can bring distributed file systems to their knees.</p>
+<h4>diploid_binaryIO_ind</h4>
+<p>Identical to diploid_binaryIO, but individual-based.</p>
+<h4>diploid_fixed_sh</h4>
+<p>This program is similar to diploid, but adds an additional mutation rate (theta_selected = 4Nu_s, where u_s is the mutation rate per gamete per generation to mutations with selection coefficient s) to mutations with selection coefficient s and dominance h. Fitness across sites is multiplicative. The output is in "ms" format&ndash;one block for neutral mutations followed by one block for selected mutations.</p>
+<p>Usage:</p>
+<p>./dipoid_fixed_sh N theta theta_selected rho s h g n nreps seed | gzip &gt; outfile.gz</p>
+<p>For this program, s can be positive or negative, as can h.</p>
+<h4>diploid_fixed_sh_ind and diploid_fixe_sh_lambda</h4>
+<p>Identical to diploid_fixed_sh, but based on the individual-based sampler.</p>
+<p>These two programs are identical in function, but differ in that the former is implemented using std::bind and the latter using lambda expressions.</p>
+<h4>diploid_twopop_mig</h4>
+<p>This program simulates an ancestral population for g generations, at which point a daughter population of size N is “budded” off from the ancestral population. Evolution continues for g2 more generations, with symmetric migration at rate M = 4Nm, where m is the migration rate per diploid per generation. The output is in "ms" format, with n haplotypes per sample just like how ms outputs data for multi-population models.</p>
+<p>Usage:</p>
+<p>./diploid_twopop_mig N theta rho g g2 M n nreps seed | gzip &gt; outfile.gz</p>
+<p>Note: the demographic model here implemented may be viewed as biologically bizarre, as it mimics the default behavior of “ms” for population split models. Let’s compare a specific example vs. the equivalent ms command line:</p>
+<p>./diplod_twopop_mig 10000 50 50 100000 1000 1 50 1 $RANDOM | gzip &gt; outfile.gz</p>
+<p>and</p>
+<p>ms 100 1 -t 50 -r 50 1000 -I 2 2 1 -ej 0.025 2 1 -em 0.025 1 2 0.</p>
+<p>Why may this be considered odd? In ms, when two populations are merged, the rate of coalescence is unaffected by default (this behavior is documented, and it is up to the user to adjust population sizes when population merge and split in ms). That means when the two populations, each of size N merge, the merged (ancestral) population is still of size N. diploid_twopop_mig is doing the same thing forwards in time: an ancestral population of size N magically changes into two populations of size N.</p>
+<h4>migsel_ind</h4>
+<p>Simulates 2 equal-sized populations of size N (N remains constant over time) diploids with selection at strength s and dominance h. Migration occurs between the two populations.</p>
+<p><em>Note that the two populations never share a common ancestor in this simulation! In other words, deme 1 is never founded by a sampling event from deme 0. This means that if you simulate for a short period of time, it is unlikely that there is a MRCA common to all individuals sampled. (See comment above about appropriateness of these examples for research...)</em></p>
+<p>Usage:</p>
+<p>./migsel_ind N 4Nu_neut 4Nu_sel 4Nr 4Nm s h f1 f2 ngens n outfilename seed</p>
+<p>where: N = population number for each deme. 4Nu_neut = 4N times the neutral mutation rate per gamete 4Nu_sel = 4N times the mutation rate per gamete to selected mutations 4Nr = 4N times the recombination rate per diploid per region per generation 4Nm = 4N times the probability of migration per diploid per generation s = the selection coefficient of newly-arising selected mutations h = dominance of newly-arising selected mutations f1 and f2 are the probabilities of inbreeding in deme 1 and 2, respectively ngens = # of generations to simulate n = sample size to take from each deme @ end of simulation (must be even #) out filename = name of output file seed = random number seed.</p>
+<p>Notes: s is taken to be s in deme 1 and -s jn deme 2. This let’s me illustrate how different fitness functions can be passed to different demes using fwdpp.</p>
+<p>The output file contains the following:</p>
+<ol type="1">
+<li>The metapopulation in binary format</li>
+<li>Two "ms"-format blocks of size 2*n. These are for neutral and selected mutations, respectively. Within each block, the first n haplotypes are from deme 1 and the second n are from deme 2.</li>
+</ol>
+<p>The program writes the data to the output file and then reads it in again. This is mainly to illustrate the binary I/O routines for individual-based metapopulation simulations.</p>
+<h4>RHH</h4>
+<p>This program simulates the "recurrent hitch-hiking" model in which the expected number of fixations of beneficial codominant mutations per site per 4N generations is Lambda. The output is ms-format (just one block for neutral mutations). This model is one of the most thoroughly-studied models of the effect of selection on linked variation. See, for example:</p>
+<ol type="1">
+<li>Wiehe, T. H. and W. Stephan, 1993 Analysis of a genetic hitchhiking model, and its application to DNA polymorphism data from Drosophila melanogaster. Molecular Biology and Evolution 10: 842–854.</li>
+<li>Kaplan, N. L., R. R. Hudson and C. H. Langley, 1989 The "hitchhiking effect" revisited. Genetics 123: 887–899.</li>
+<li>Braverman, J. M., R. R. Hudson, N. L. Kaplan, C. H. Langley and W. Stephan, 1995 The hitchhiking effect on the site frequency spectrum of DNA polymorphisms. Genetics 140: 783–796.</li>
 </ol>
 <ol type="1">
-<li>diploid_ind.cc<br/>
-</li>
-<li>diploid_binaryIO_ind.cc<br/>
-</li>
-<li>diploid_fixed_sh_ind.cc<br/>
-<br/>
-The individual-based examples are identical in use to the gamete-based examples, but differ in implementation.</li>
+<li>Przeworski, M., 2002 The Signature of Positive Selection at Randomly Chosen Loci. Genetics 160: 1179.</li>
 </ol>
-<p>To use the library in your own code, include the library's main header:<br/>
+<p>The model in this program allows selected mutations within the region with neutral mutation rate theta (the so-called "neutral" or "sampled" region in the coalescent literature treating RHH via the structured coalescent). In general, the majority of selected sites will appear up to s/r_bp base pairs, where r is the recombination rate per base pair.</p>
+<p>The population is simulated for g generations with only neutral mutations, followed by g2 more generations with neutral and selected mutations. The selection coefficient, s, must be &gt; 0, but the program doesn't check for this, so just enter an appropriate value please. The output is in ms format, and only contains data for neutral mutations, so any segregating selected mutations will not be output. The region with mutation rate theta is L base pairs long. L is really only used to calculate r_bp, which is rho/(4*N*(L-1)), as there are L-1 possible positions for recombination to occur in a region of L nucleotides.</p>
+<p>Usage:</p>
+<p>./RHH N theta rho L s Lambda g1 g2 n nreps seed | gzip &gt; outfile.gz</p>
+<p>Note: many of the well-known formulas for the effect of RHH on linked, neutral variation make very strong assumptions about the parameter values. For example, N needs to be large and s needs to be small, but Ns needs to be large. Further, Lambda needs to be sufficiently small such that sweeps are independent in time. This means that plugging in values to this program and comparing to theoretical predictions may lead to apparent discrepancies. This is also the case with various coalescent simulations of RHH.</p>
+<h4>bneck_selection_ind</h4>
+<p>This program simulates a population for g generations at size N. In generation g+1, N changes to N2 &lt;= N. The population then grows exponentially to size N3 &gt;= N2 in g2 generations. Selected and neutral mutations are allowed each generation. The output is in “ms” format&ndash;one block for neutral mutations followed by one block for selected mutations.</p>
+<p>Usage:</p>
+<p>./bneck_selection_ind N theta_neutral theta_sel rho s h g1 N2 N3 g2 n nreps seed</p>
+<p>Where:<br/>
+ N = starting population size<br/>
+ theta_neutral = 4N*(neutral mutation rate per gamete)<br/>
+ theta_sel = 4N*(mutation rate per gamete to selected mutations)<br/>
+ rho = 4Nr, where r is recombination rate per diploid per generation<br/>
+ s = selection coefficient. Can be negative or positive.<br/>
+ h = dominance of selected mutations<br/>
+ N2 = size of bottlenecked population<br/>
+ N3 = size of recovered population<br/>
+ g2 = generations taken to go from size N2 to size N3<br/>
+ n = sample size to take from the population.<br/>
+ nreps = # replicates to simulate<br/>
+ seed = random number seed.<br/>
 </p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="df/df8/diploid_8hh.html">fwdpp/diploid.hh</a>&gt;</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="A"></a>
-note about compiling</h2>
-<p>Several of the library functions allocate containers. Based on performance testing that I have done, in some cases I use containers from namespace std, and in other cases I use the version found in namespace boost::container. So, there is a hodge podge of container type usage within the library's internal code, and that is intentional, and the way it is set up results in the fastest run times on my system. You have the option of reverting the code to using only the containers from namespace std by adding -DUSE_STANDARD_CONTAINERS when compiling programs using the library. Note that the default use (e.g., leaving USE_STANDARD_CONTAINERS undefined) requires linking to the boost_system library (via -lboost_system). </p>
+<h4>TFL2013</h4>
+<p>This is the simulation from Thornton, Foran, and Long (2013) Properties and Modeling of GWAS when Complex Disease Risk Is Due to Non-Complementing, Deleterious Mutations in Genes of Large Effect. PLoS Genetics 9: e1003258. The manuscript is available <a href="http://www.plosgenetics.org/article/info%3Adoi%2F10.1371%2Fjournal.pgen.1003258">here</a>. See that paper for modeling details.</p>
+<p>Usage:</p>
+<p>./TFL2013 N mu_disease mu_neutral littler esize dist sdE sdS burnin evolve msfile phenofile effectfile</p>
+<p>Where:<br/>
+ N = diploid population number<br/>
+ mu_disease = mutation rate to causative mutations (per gamete)<br/>
+ mu_neutral = mutation rate to neutral mutations (per gamete)<br/>
+ littler = Recombination rate per diploid<br/>
+ esize = Effect size of causative mutation.<br/>
+ dist = boolean. If 0, then esize is fixed. If 1, then esize is the mean of an exponentural with mean esize<br/>
+ sdE = standard deviation in Gaussian noise added to phenotype<br/>
+ sdS = standard deviation in Gaussian fitness function. (Should probably just set to 1.)<br/>
+ burnin = number of generations to evolve with no causative mutations.<br/>
+ evolve = number of generations to evolve with neutral and causative mutations.<br/>
+ msfile = File to write the entire population in "ms" format. Each sequential pair of gametes is a different diploids. Output is gzipped.<br/>
+ phenofile = File to write phenotypes of population. Two columns: genetic component first, then Gaussian noise component. The phenotype is the sum of the two. Order of phenotypes is same as order of diploids in msfile. Gzipped<br/>
+ effectfile = File to write positions and effect sizes of causative mutations. Gzipped.<br/>
+</p>
+<p>Example from the PLoS Genetics paper:</p>
+<p>./TFL2013 20000 0.000125 0.00125 0.00125 0.5 1 0.075 1 0 160000 msfile.gz phenotypes.gz effects.gz</p>
+<p>will simulate a mean effect size of 0.5 (exponentially-distributed). The above will take probably many hours to run. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

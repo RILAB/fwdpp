@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['sampling_5ffunctions_2ehpp',['sampling_functions.hpp',['../dd/d0a/sampling__functions_8hpp.html',1,'']]]
+  ['initms_2ehpp',['initms.hpp',['../d4/d28/initms_8hpp.html',1,'']]],
+  ['insertion_5fpolicies_2ehpp',['insertion_policies.hpp',['../d0/d13/insertion__policies_8hpp.html',1,'']]],
+  ['io_2ehpp',['IO.hpp',['../df/d9f/IO_8hpp.html',1,'']]]
 ];

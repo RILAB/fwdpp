@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -107,6 +107,7 @@ Inheritance diagram for KTfwd::mutation:</div>
   <img src="../../d1/d7f/structKTfwd_1_1mutation.png" usemap="#KTfwd::mutation_map" alt=""/>
   <map id="KTfwd::mutation_map" name="KTfwd::mutation_map">
 <area href="../../d1/da4/structKTfwd_1_1mutation__base.html" title="Base class for mutations At minimum, a mutation must contain a position and a count in the population..." alt="KTfwd::mutation_base" shape="rect" coords="0,0,133,24"/>
+<area href="../../d5/df5/structmutation__with__origin.html" alt="mutation_with_origin" shape="rect" coords="0,112,133,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -146,7 +147,7 @@ Data Fields</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The simplest mutation type, adding just a selection coefficient and dominance to the interface. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/d24/diploid_fixed_sh_8cc-example.html#_a0">diploid_fixed_sh.cc</a>, <a class="el" href="../../df/df6/diploid_fixed_sh_ind_8cc-example.html#_a0">diploid_fixed_sh_ind.cc</a>, <a class="el" href="../../db/d2e/migsel_ind_8cc-example.html#_a0">migsel_ind.cc</a>, <a class="el" href="../../de/d58/pfix_8cc-example.html#_a0">pfix.cc</a>, and <a class="el" href="../../d3/d0a/RHH_8cc-example.html#_a0">RHH.cc</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/d24/diploid_fixed_sh_8cc-example.html#_a0">diploid_fixed_sh.cc</a>, <a class="el" href="../../df/df6/diploid_fixed_sh_ind_8cc-example.html#_a0">diploid_fixed_sh_ind.cc</a>, <a class="el" href="../../db/d2e/migsel_ind_8cc-example.html#_a0">migsel_ind.cc</a>, <a class="el" href="../../de/d58/pfix_8cc-example.html#_a0">pfix.cc</a>, <a class="el" href="../../d3/d0a/RHH_8cc-example.html#_a1">RHH.cc</a>, and <a class="el" href="../../dc/d1a/TFL2013_8cc-example.html#_a10">TFL2013.cc</a>.</dd>
 </dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7785639d26fd1d9b93972f27bf05392a"></a>
 <div class="memitem">
@@ -239,7 +240,8 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 
 <p>dominance coefficient </p>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d2e/migsel_ind_8cc-example.html#a7">migsel_ind.cc</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="a9a7e60b11eec95550d7fb26ad8d69b28"></a>
@@ -261,7 +263,8 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 
 <p>selection coefficient </p>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../db/d2e/migsel_ind_8cc-example.html#a6">migsel_ind.cc</a>.</dd>
+</dl>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gamete_5fbase',['gamete_base',['../d6/d90/structKTfwd_1_1gamete__base.html#a8dca31d88f70b73cbb5183db6245ad4e',1,'KTfwd::gamete_base::gamete_base(const unsigned &amp;icount)'],['../d6/d90/structKTfwd_1_1gamete__base.html#a984327187b43fdcdaa1b36a1cc25d451',1,'KTfwd::gamete_base::gamete_base(const unsigned &amp;icount, const mutation_container &amp;n, const mutation_container &amp;s)']]]
+  ['check_5fsum',['check_sum',['../da/d8b/namespaceKTfwd.html#a728e20cb60f82b818b5cc570722079a4',1,'KTfwd::check_sum(const vector_type&lt; gamete_type, vector_type_allocator &gt; &amp;gametes, const unsigned &amp;twoN)'],['../da/d8b/namespaceKTfwd.html#a3a49997b8e11c148177adea58dd916a6',1,'KTfwd::check_sum(const vector_type&lt; gamete_type, vector_type_allocator &gt; *gametes, const unsigned &amp;twoN)']]]
 ];
